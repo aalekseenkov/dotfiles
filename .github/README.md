@@ -7,7 +7,7 @@ Storing using a bare repository:
 4. ```dotfiles config --local status.showUntrackedFiles no```
 5. ```dotfiles add .vimrc```
 6. ```dotfiles commit -S -m "add .vimrc"```
-7. ```dotfiles remote add origin <remote-url>```
+7. ```dotfiles remote add origin git@github.com:aalekseenkov/dotfiles.git```
 8. ```dotfiles push -u origin master```
 
 Installing:
