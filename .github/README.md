@@ -12,7 +12,7 @@ Storing using a bare repository:
 
 Installing:
 1. ```echo ".dotfiles" >> .gitignore```
-2. ```git clone --bare <remote-git-repo-url> $HOME/.dotfiles```
+2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
 3. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
 4. ```dotfiles config --local status.showUntrackedFiles no```
 5. ```dotfiles checkout```
