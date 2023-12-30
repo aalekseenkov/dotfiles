@@ -102,5 +102,5 @@ fi
 set -o vi
 export EDITOR=vi
 
-alias config='/usr/bin/git --git-dir=/root/.cfg/ --work-tree=/root'
+alias dotfiles='/usr/bin/git --git-dir=/root/.dotfiles/ --work-tree=/root'
 
