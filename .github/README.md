@@ -1,6 +1,7 @@
 # Dotfiles
 
-Storing using a bare repository:
+## Storing using a bare repository:
+
 1. ```git init --bare $HOME/.dotfiles```
 2. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
 3. ```echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc```
@@ -10,7 +11,8 @@ Storing using a bare repository:
 7. ```dotfiles remote add origin git@github.com:aalekseenkov/dotfiles.git```
 8. ```dotfiles push -u origin master```
 
-Installing:
+## Installing:
+
 1. ```echo ".dotfiles" >> .gitignore```
 2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
 3. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
@@ -18,6 +20,7 @@ Installing:
 5. ```dotfiles checkout```
 
 ## Articles
+
 * [The best way to store your dotfiles: A bare Git repository EXPLAINED](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/)
 * [Manage Dotfiles With a Bare Git Repository](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
 * [Dotfiles: Best way to store in a bare git repository](https://www.atlassian.com/git/tutorials/dotfiles)
