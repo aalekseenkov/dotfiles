@@ -18,8 +18,8 @@
 3. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
 4. ```dotfiles config --local status.showUntrackedFiles no```
 5. ```dotfiles checkout```
-6. ```vim```
-7. ```:PlugInstall```
+6. ```exec bash```
+7. ```vim +PlugInstall +qall```
 
 ## Articles
 
