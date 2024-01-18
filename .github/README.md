@@ -26,3 +26,23 @@
 * [The best way to store your dotfiles: A bare Git repository EXPLAINED](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/)
 * [Manage Dotfiles With a Bare Git Repository](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
 * [Dotfiles: Best way to store in a bare git repository](https://www.atlassian.com/git/tutorials/dotfiles)
+
+## Additional actions (optional)
+
+### Generating a new SSH key
+1. ```ssh-keygen -t ed25519 -C "your_email@example.com"```
+2. ```eval "$(ssh-agent -s)"```
+3. ```ssh-add ~/.ssh/id_ed25519```
+
+### Adding the SSH public keys to account on GitHub
+We should add two ssh-keys (authentication one and signing one) to the account on GitHub
+
+### Configuring Git for SSH commit signature verification
+1. ```git config --global user.name "your_user"```
+2. ```git config --global user.email "your_email@example.com"```
+3. ```git config --global commit.gpgsign true```
+4. ```git config --global gpg.format ssh```
+5. ```git config --global user.signingkey "~/.ssh/id_ed25519.pub"```
+6. ```git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers```
+7. ```touch ~/.ssh/allowed_signers```
+8. ```echo "your_email@example.com <~/.ssh/id_ed25519.pub>" >> ~/.ssh/authorized_signatures```
