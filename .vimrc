@@ -140,7 +140,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'chiel92/vim-autoformat'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
-Plug 'yggdroot/indentline'
+" Plug 'yggdroot/indentline'
 Plug 'skywind3000/asyncrun.vim'
 
 call plug#end()
@@ -153,10 +153,10 @@ let g:Powerline_symbols='unicode'
 let g:airline#extensions#xkblayout#enabled = 0
 
 "yggdroot/indentline'
-let g:indentLine_char = '|'
-let g:vim_json_syntax_conceal = 0
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_conceal_code_blocks = 0
+" let g:indentLine_char = '|'
+" let g:vim_json_syntax_conceal = 0
+" let g:vim_markdown_conceal = 0
+" let g:vim_markdown_conceal_code_blocks = 0
 
 "ALE
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
@@ -174,10 +174,10 @@ let g:ale_lint_on_text_changed = 'never'
 " colorscheme gruvbox
 
 "Current colorschemes
-colorscheme navajo-night
+colorscheme basic
+" colorscheme navajo-night
 " colorscheme breeze
 " colorscheme newspaper
-" colorscheme dusk
 
 "Backlog
 "colorscheme ashen

@@ -100,7 +100,7 @@ fi
 
 # a2labs
 set -o vi
+set +H
 export EDITOR=vi
 
-alias dotfiles='/usr/bin/git --git-dir=/root/.dotfiles/ --work-tree=/root'
-
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
