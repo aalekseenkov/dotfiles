@@ -40,7 +40,7 @@ set noshowmode
 set conceallevel=0
 set number relativenumber
 set showtabline=0
-set cursorline
+" set cursorline
 " set wrap linebreak nolist
 set nowrap
 set list
@@ -101,7 +101,7 @@ let mapleader = "-"
 nnoremap <CR> :noh<CR><CR>:<backspace>
 
 noremap <F3> :Autoformat<CR>
-nnoremap <silent> <F4> :set cursorline!<CR>
+" nnoremap <silent> <F4> :set cursorline!<CR>
 noremap <F5> :!python3 %:p<CR>
 
 nnoremap <up> <nop>
@@ -137,6 +137,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 "For development
+Plug 'tpope/vim-fugitive'
 Plug 'chiel92/vim-autoformat'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
@@ -174,9 +175,9 @@ let g:ale_lint_on_text_changed = 'never'
 " colorscheme gruvbox
 
 "Current colorschemes
-colorscheme basic
+colorscheme breeze
+" colorscheme basic
 " colorscheme navajo-night
-" colorscheme breeze
 " colorscheme newspaper
 
 "Backlog
