@@ -46,3 +46,7 @@ We should add two ssh-keys (authentication one and signing one) to the account o
 6. ```git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers```
 7. ```touch ~/.ssh/allowed_signers```
 8. ```echo "your_email@example.com <~/.ssh/id_ed25519.pub>" >> ~/.ssh/authorized_signatures```
+
+### Switching remote URLs from HTTPS to SSH
+1. ```git remote set-url origin git@github.com:OWNER/REPOSITORY.git```
+2. ```git remote -v```
