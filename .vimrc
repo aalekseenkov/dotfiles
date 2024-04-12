@@ -64,7 +64,6 @@ set foldnestmax=4
 " set foldlevelstart=0
 
 "More CLI
-set t_Co=256
 set vb
 set t_ut=""
 
@@ -81,7 +80,6 @@ au BufNewFile,BufRead *.py
 \ set shiftwidth=4
 
 "Colors
-set termguicolors
 hi Normal guibg=NONE ctermbg=NONE
 let g:terminal_ansi_colors = [
 \ '#282828', '#cc241d', '#98971a', '#d79921',
@@ -131,33 +129,22 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'morhetz/gruvbox'
-Plug 'flazz/vim-colorschemes'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-commentary'
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/edge'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'w0rp/ale'
+Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
+
 Plug 'sheerun/vim-polyglot'
-"For development
-Plug 'tpope/vim-fugitive'
 Plug 'chiel92/vim-autoformat'
 Plug 'mattn/emmet-vim'
-Plug 'w0rp/ale'
-" Plug 'yggdroot/indentline'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'skywind3000/asyncrun.vim'
+" Plug 'flazz/vim-colorschemes'
 
 call plug#end()
-
-"Airline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#keymap#enabled = 0
-let g:airline_section_z = "\ue0a1:%l/%L Col:%c"
-let g:Powerline_symbols='unicode'
-let g:airline#extensions#xkblayout#enabled = 0
-
-"yggdroot/indentline'
-" let g:indentLine_char = '|'
-" let g:vim_json_syntax_conceal = 0
-" let g:vim_markdown_conceal = 0
-" let g:vim_markdown_conceal_code_blocks = 0
 
 "ALE
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
@@ -165,71 +152,72 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_text_changed = 'never'
 
-"Background
-" set background=dark
+" =====================
+" Colorscheme settings
+" =====================
+set t_Co=256
+if has('termguicolors')
+  set termguicolors
+endif
+
+" ===================
+" Current background
+" ===================
+set background=dark
 " set background=light
 
-"Gruvbox
-" let g:gruvbox_contrast_dark='medium'
-" let g:gruvbox_contrast_light='soft'
-" colorscheme gruvbox
+" Everforest
+" Set contrast: 'hard', 'medium'(default), 'soft'
+let g:everforest_background = 'soft'
+let g:everforest_better_performance = 1
 
-"Current colorschemes
-colorscheme breeze
-" colorscheme basic
+" Edge
+" Edge styles: 'default(default)', 'aura', 'neon'
+let g:edge_style = 'aura'
+let g:edge_better_performance = 1
+
+" =====================
+" Current colorschemes
+" =====================
+colorscheme everforest
+" colorscheme edge
+" colorscheme PaperColor
+
+" colorscheme breeze
 " colorscheme navajo-night
 " colorscheme newspaper
 
-"Backlog
-"colorscheme ashen
-"colorscheme aurora
-"colorscheme base16-atelierdune
-"colorscheme base16-atelierestuary
-"colorscheme base16-atelierforest
-"colorscheme base16-atelierheath
-"colorscheme base16-atelierplateau
-"colorscheme basic
-"colorscheme blueprint
-"colorscheme borland
-"colorscheme breeze
-"colorscheme colorsbox-material
-"colorscheme colorzone
-"colorscheme cthulhian
-"colorscheme darkblue2
-"colorscheme dawn
-"colorscheme denim
-"colorscheme deus
-"colorscheme dusk
-"colorscheme eclipse
-"colorscheme fairyfloss
-"colorscheme flattened_light
-"colorscheme herokudoc
-"colorscheme lakers_away
-"colorscheme lightning
-"colorscheme LightTan
-"colorscheme lilac
-"colorscheme materialbox
-"colorscheme moria
-"colorscheme navajo-night
-"colorscheme neutron
-"colorscheme newspaper
-"colorscheme nord
-"colorscheme nuvola
-"colorscheme osx_like
-"colorscheme PapayaWhip
-"colorscheme pleasant
-"colorscheme pyte
-"colorscheme rainbow_autumn
-"colorscheme rainbow_sea
-"colorscheme seoul256
-"colorscheme simple_b
-"colorscheme solarized8_light_high
-"colorscheme soso
-"colorscheme spring-night
-"colorscheme stackoverflow
-"colorscheme sweater
-"colorscheme tango-desert
-"colorscheme tango-morning
-"colorscheme tangoX
-"colorscheme twilight256
-"colorscheme xian
+" lightline
+let g:lightline = {}
+
+" ================================
+" Current linghlines colorschemes
+" ================================
+let g:lightline.colorscheme = 'everforest'
+" let g:lightline.colorscheme = 'edge'
+" let g:lightline.colorscheme = 'PaperColor'
+
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \  'linter_unavailable': 'lightline#ale#unavailable',
+      \ }
+let g:lightline.component_type = {
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \ }
+let g:lightline.active = {
+            \ 'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok', 'linter_unavailable' ],
+            \            [ 'lineinfo' ],
+            \            [ 'percent' ],
+            \            [ 'fileformat', 'fileencoding', 'filetype'] ] }
+
+let g:lightline#ale#indicator_checking = "\uf110"
+let g:lightline#ale#indicator_infos = "\uf129"
+let g:lightline#ale#indicator_warnings = "\uf071"
+let g:lightline#ale#indicator_errors = "\uf05e"
+let g:lightline#ale#indicator_ok = "\uf00c"
+let g:lightline#ale#indicator_unavailable = "\uf05e"
