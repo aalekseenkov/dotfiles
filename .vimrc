@@ -132,9 +132,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'sainnhe/everforest'
 Plug 'sainnhe/edge'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'lifepillar/vim-solarized8'
+Plug 'icymind/neosolarized'
+
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
+Plug 'scrooloose/nerdtree'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'chiel92/vim-autoformat'
@@ -160,9 +164,9 @@ if has('termguicolors')
   set termguicolors
 endif
 
-" ===================
-" Current background
-" ===================
+" ===========
+" Background
+" ===========
 set background=dark
 " set background=light
 
@@ -176,13 +180,34 @@ let g:everforest_better_performance = 1
 let g:edge_style = 'aura'
 let g:edge_better_performance = 1
 
+" NeoSolarized
+let g:neosolarized_contrast = "normal"
+let g:neosolarized_visibility = "normal"
+let g:neosolarized_vertSplitBgTrans = 1
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 0
+let g:neosolarized_termBoldAsBright = 1
+
 " =====================
-" Current colorschemes
+" Plugin colorschemes
 " =====================
+" colorscheme NeoSolarized
 colorscheme everforest
 " colorscheme edge
 " colorscheme PaperColor
+" colorscheme solarized8
+" colorscheme solarized8_flat
+" colorscheme solarized8_high
+" colorscheme solarized8_low
 
+" =========================
+" Stand-alone colorschemes
+" =========================
+" colorscheme selenized
+" colorscheme selenized_bw
+" colorscheme OKSolar-dark
+" colorscheme OKSolar-light
 " colorscheme breeze
 " colorscheme navajo-night
 " colorscheme newspaper
@@ -190,9 +215,9 @@ colorscheme everforest
 " lightline
 let g:lightline = {}
 
-" ================================
-" Current linghlines colorschemes
-" ================================
+" ========================
+" colorschemes lightlines
+" ========================
 let g:lightline.colorscheme = 'everforest'
 " let g:lightline.colorscheme = 'edge'
 " let g:lightline.colorscheme = 'PaperColor'
