@@ -130,7 +130,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'sainnhe/everforest'
-Plug 'sainnhe/edge'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-solarized8'
 Plug 'icymind/neosolarized'
@@ -146,7 +145,6 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'skywind3000/asyncrun.vim'
-" Plug 'flazz/vim-colorschemes'
 
 call plug#end()
 
@@ -156,29 +154,22 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_text_changed = 'never'
 
-" =====================
 " Colorscheme settings
-" =====================
 set t_Co=256
-if has('termguicolors')
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
-" ===========
 " Background
-" ===========
 set background=dark
 " set background=light
 
 " Everforest
-" Set contrast: 'hard', 'medium'(default), 'soft'
 let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
-
-" Edge
-" Edge styles: 'default(default)', 'aura', 'neon'
-let g:edge_style = 'aura'
-let g:edge_better_performance = 1
+let g:everforest_show_eob = 0
 
 " NeoSolarized
 let g:neosolarized_contrast = "normal"
@@ -189,21 +180,16 @@ let g:neosolarized_underline = 1
 let g:neosolarized_italic = 0
 let g:neosolarized_termBoldAsBright = 1
 
-" =====================
 " Plugin colorschemes
-" =====================
-" colorscheme NeoSolarized
 colorscheme everforest
-" colorscheme edge
+" colorscheme NeoSolarized
 " colorscheme PaperColor
 " colorscheme solarized8
 " colorscheme solarized8_flat
 " colorscheme solarized8_high
 " colorscheme solarized8_low
 
-" =========================
 " Stand-alone colorschemes
-" =========================
 " colorscheme selenized
 " colorscheme selenized_bw
 " colorscheme OKSolar-dark
@@ -215,11 +201,7 @@ colorscheme everforest
 " lightline
 let g:lightline = {}
 
-" ========================
-" colorschemes lightlines
-" ========================
 let g:lightline.colorscheme = 'everforest'
-" let g:lightline.colorscheme = 'edge'
 " let g:lightline.colorscheme = 'PaperColor'
 
 let g:lightline.component_expand = {

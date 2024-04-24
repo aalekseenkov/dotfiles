@@ -122,3 +122,4 @@ set +H
 export EDITOR=vi
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
