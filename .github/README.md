@@ -20,6 +20,8 @@
 5. ```dotfiles checkout```
 6. ```exec bash```
 7. ```vim +PlugInstall +qall```
+8. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
+9. ```tmux``` and press ```prefix + I``` (capital i, as in Install) to fetch the plugind for tmux
 
 ## Articles
 
