@@ -1,17 +1,8 @@
 # Dotfiles
 
-## Storing using a bare repository:
+Dotfiles are hidden configuration files in Unix-like systems that store settings for shells, editors, and other tools. By managing your dotfiles, we'll ensure a consistent experience across systems and save time reconfiguring tools.
 
-1. ```git init --bare $HOME/.dotfiles```
-2. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
-3. ```echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc```
-4. ```dotfiles config --local status.showUntrackedFiles no```
-5. ```dotfiles add .vimrc```
-6. ```dotfiles commit -S -m "add .vimrc"```
-7. ```dotfiles remote add origin git@github.com:aalekseenkov/dotfiles.git```
-8. ```dotfiles push -u origin master```
-
-## Installing:
+## Installing
 
 1. ```echo ".dotfiles" >> .gitignore```
 2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
@@ -22,12 +13,6 @@
 7. ```vim +PlugInstall +qall```
 8. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
 9. ```tmux``` and press ```prefix + I``` (capital i, as in Install) to fetch the plugind for tmux
-
-## Articles
-
-* [The best way to store your dotfiles: A bare Git repository EXPLAINED](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/)
-* [Manage Dotfiles With a Bare Git Repository](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
-* [Dotfiles: Best way to store in a bare git repository](https://www.atlassian.com/git/tutorials/dotfiles)
 
 ## Additional actions (optional)
 
@@ -52,3 +37,20 @@ We should add two ssh-keys (authentication one and signing one) to the account o
 ### Switching remote URLs from HTTPS to SSH
 1. ```git remote set-url origin git@github.com:OWNER/REPOSITORY.git```
 2. ```git remote -v```
+
+## Articles
+
+* [The best way to store your dotfiles: A bare Git repository EXPLAINED](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/)
+* [Manage Dotfiles With a Bare Git Repository](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
+* [Dotfiles: Best way to store in a bare git repository](https://www.atlassian.com/git/tutorials/dotfiles)
+
+## Storing using a bare repository (initial step):
+
+1. ```git init --bare $HOME/.dotfiles```
+2. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
+3. ```echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc```
+4. ```dotfiles config --local status.showUntrackedFiles no```
+5. ```dotfiles add .vimrc```
+6. ```dotfiles commit -S -m "add .vimrc"```
+7. ```dotfiles remote add origin git@github.com:aalekseenkov/dotfiles.git```
+8. ```dotfiles push -u origin master```
