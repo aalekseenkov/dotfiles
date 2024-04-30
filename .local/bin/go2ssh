@@ -2,9 +2,11 @@
 
 set -e
 
-echo ""
-echo 1 - Server1
-echo 0 - Exit
+clear
+echo "AVA-SSH-Manager"
+echo "---------------"
+echo "1 - Server1"
+echo "0 - Exit"
 echo ""
 echo -n "Select the server to ssh: "
 read selection
