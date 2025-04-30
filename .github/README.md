@@ -9,10 +9,11 @@ Dotfiles are hidden configuration files in Unix-like systems that store settings
 3. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
 4. ```dotfiles config --local status.showUntrackedFiles no```
 5. ```dotfiles checkout```
-6. ```exec bash```
-7. ```vim +PlugInstall +qall```
-8. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
-9. ```tmux``` and press ```prefix + I``` (capital i, as in Install) to fetch the plugind for tmux
+6. ```mv .bashrc .bashrc.save```
+7. ```exec bash```
+8. ```vim +PlugInstall +qall```
+9. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
+10. ```tmux``` and press ```prefix + I``` (capital i, as in Install) to fetch the plugind for tmux
 
 ## Additional actions (optional)
 
