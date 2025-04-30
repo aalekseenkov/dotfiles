@@ -2,18 +2,23 @@
 
 Dotfiles are hidden configuration files in Unix-like systems that store settings for shells, editors, and other tools. By managing your dotfiles, we'll ensure a consistent experience across systems and save time reconfiguring tools.
 
+## Prerequisites
+
+1. ```sudo apt update```
+2. ```sudo apt install git vim tmux``` 
+
 ## Installing
 
 1. ```echo ".dotfiles" >> .gitignore```
 2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
 3. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
 4. ```dotfiles config --local status.showUntrackedFiles no```
-5. ```dotfiles checkout```
-6. ```mv .bashrc .bashrc.save```
+5. ```mv .bashrc .bashrc.save```
+6. ```dotfiles checkout```
 7. ```exec bash```
 8. ```vim +PlugInstall +qall```
 9. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
-10. ```tmux``` and press ```prefix + I``` (capital i, as in Install) to fetch the plugind for tmux
+10. ```~/.tmux/plugins/tpm/bin/install_plugins```
 
 ## Additional actions (optional)
 
