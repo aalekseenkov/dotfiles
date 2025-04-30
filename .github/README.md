@@ -5,7 +5,7 @@ Dotfiles are hidden configuration files in Unix-like systems that store settings
 ## Prerequisites
 
 1. ```sudo apt update```
-2. ```sudo apt install git vim tmux``` 
+2. ```sudo apt install -y curl git xclip fzf tmux vim neovim zsh```
 
 ## Installing
 
