@@ -9,16 +9,16 @@ Dotfiles are hidden configuration files in Unix-like systems that store settings
 1. In GNOME Terminal *Preferences* rename `Unnamed` Profile's name to `Default`
 2. Run pre-install and the Gogh script's commands
 ```
-sudo apt update && sudo apt-get install dconf-cli uuid-runtime wget
+sudo apt update && sudo apt-get install -y dconf-cli uuid-runtime wget
 bash -c "$(wget -qO- https://git.io/vQgMr)"
 ```
 3. Input the numbers of the themes: Selenized Dark, Selenized Light (`280 281`)
 
-## Powerline and coding fonts
+## Monospaced fonts
 
-### Only Hack fonts
+### Only Hack Nerd Mono font
 
-1. ```sudo apt update && sudo apt-get install unzip curl```
+1. ```sudo apt update && sudo apt-get install -y unzip curl```
 2. ```sudo mkdir -p /usr/share/fonts/Hack```
 3. ```curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)```
 4. ```sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip```
@@ -26,8 +26,17 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 6. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack Nerd Font Mono` - 16
 7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
-### The set of monospaced fonts for powerline
-[Quick Installation](https://github.com/powerline/fonts/blob/master/README.rst)
+### The collection of [powerline fonts](https://github.com/powerline/fonts/blob/master/README.rst)
+
+1. ```sudo apt update && sudo apt install -y git```
+2. ```git clone https://github.com/powerline/fonts.git --depth=1```
+3. ```cd fonts```
+4. ```./install.sh```
+5. ```cd ..```
+6. ```rm -rf fonts```
+7. In GNOME Terminal *Preferences - Selenized Light - Custom Font* - set `Hack` - 16
+8. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack` - 16
+9. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
 ## Tools and Applications
 
