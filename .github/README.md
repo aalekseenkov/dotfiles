@@ -1,6 +1,8 @@
 # Dotfiles
 
-Dotfiles are hidden configuration files in Unix-like systems that store settings for shells, editors, and other tools. By managing your dotfiles, we'll ensure a consistent experience across systems and save time reconfiguring tools.
+Dotfiles are hidden configuration files in Unix-like systems that store settings for shells, editors, and other tools. By managing our dotfiles, we'll ensure a consistent experience across systems and save time reconfiguring tools.
+
+**All tools and configurations were tested under** `Linux Mint 22.1 Cinnamon`
 
 ## GNOME Terminal
 
@@ -16,16 +18,6 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 
 ## Monospaced fonts
 
-### Only Hack Nerd Mono font
-
-1. ```sudo apt update && sudo apt-get install -y unzip curl```
-2. ```sudo mkdir -p /usr/share/fonts/Hack```
-3. ```curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)```
-4. ```sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip```
-5. In GNOME Terminal *Preferences - Selenized Light - Custom Font* - set `Hack Nerd Font Mono` - 16
-6. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack Nerd Font Mono` - 16
-7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
-
 ### The collection of [powerline fonts](https://github.com/powerline/fonts/blob/master/README.rst)
 
 1. ```sudo apt update && sudo apt install -y git```
@@ -37,6 +29,22 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 7. In GNOME Terminal *Preferences - Selenized Light - Custom Font* - set `Hack` - 16
 8. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack` - 16
 9. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
+
+**To set the fonts that we can't see in the GNOME Terminal font's list (such as Fira):**
+
+10. Open Font Selection App
+11. Set the system monospace font to `Fira Mono for Powerline Regular`
+12. In the Terminal's Font Preference, leave the Custom Font option unchecked, .i.e use system font
+
+### Only Hack Nerd Mono font
+
+1. ```sudo apt update && sudo apt-get install -y unzip curl```
+2. ```sudo mkdir -p /usr/share/fonts/Hack```
+3. ```curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)```
+4. ```sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip```
+5. In GNOME Terminal *Preferences - Selenized Light - Custom Font* - set `Hack Nerd Font Mono` - 16
+6. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack Nerd Font Mono` - 16
+7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
 ## Tools and Applications
 
