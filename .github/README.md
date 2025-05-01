@@ -33,7 +33,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 **To set the fonts that we can't see in the GNOME Terminal font's list (such as Fira):**
 
 10. Open Menu > Font Selection
-11. Set the system monospace font to `Fira Mono for Powerline Regular`
+11. Set the system monospace font to `Fira Mono for Powerline Regular` - 16
 12. In the Terminal's Font Preference, leave the Custom Font option unchecked, .i.e use system font
 
 ### Only Hack Nerd Mono font
