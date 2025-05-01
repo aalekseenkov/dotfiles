@@ -6,14 +6,15 @@ Dotfiles are hidden configuration files in Unix-like systems that store settings
 
 ### Gogh color's schemes
 
-1. In *Preferences* rename `Unnamed` Profile's name to `Default`
+1. In GNOME Terminal *Preferences* rename `Unnamed` Profile's name to `Default`
 2. Run pre-install and the Gogh script's commands
 ```
 sudo apt update && sudo apt-get install dconf-cli uuid-runtime
 bash -c "$(wget -qO- https://git.io/vQgMr)"
 ```
 3. Choose the themes: Selenized Dark, Selenized Light (`280 281`)
-4. In *Preferences* - set `Selenized Light` as default theme
+
+## Powerline fonts
 
 ### Hack fonts
 
@@ -21,10 +22,13 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 2. ```sudo mkdir -p /usr/share/fonts/Hack```
 3. ```curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)```
 4. ```sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip```
-5. In *Preferences - Selenized Light - Custom Font* - set `Hack Nerd Font Mono` - 16
-6. In *Preferences - Selenized Dark - Custom Font* - set `Hack Nerd Font Mono` - 16
+5. In GNOME Terminal *Preferences - Selenized Light - Custom Font* - set `Hack Nerd Font Mono` - 16
+6. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack Nerd Font Mono` - 16
+7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
-## DevOps Tools and Apps
+## Tools and Applications
+
+### CLI Programs
 
 1. ```sudo apt update```
 2. ```sudo apt install -y curl git xclip fzf tmux vim neovim zsh```
