@@ -26,13 +26,13 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 4. ```./install.sh```
 5. ```cd ..```
 6. ```rm -rf fonts```
-7. In GNOME Terminal *Preferences - Selenized Light - Custom Font* - set `Hack` - 16
-8. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack` - 16
-9. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
+7. In GNOME Terminal *Preferences > Selenized Light > Custom Font* - set `Hack` - 16
+8. In GNOME Terminal *Preferences > Selenized Dark > Custom Font* - set `Hack` - 16
+9. In GNOME Terminal *Preferences* > set `Selenized Light` as default theme
 
 **To set the fonts that we can't see in the GNOME Terminal font's list (such as Fira):**
 
-10. Open Font Selection App
+10. Open Menu > Font Selection
 11. Set the system monospace font to `Fira Mono for Powerline Regular`
 12. In the Terminal's Font Preference, leave the Custom Font option unchecked, .i.e use system font
 
@@ -42,8 +42,8 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 2. ```sudo mkdir -p /usr/share/fonts/Hack```
 3. ```curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)```
 4. ```sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip```
-5. In GNOME Terminal *Preferences - Selenized Light - Custom Font* - set `Hack Nerd Font Mono` - 16
-6. In GNOME Terminal *Preferences - Selenized Dark - Custom Font* - set `Hack Nerd Font Mono` - 16
+5. In GNOME Terminal *Preferences > Selenized Light > Custom Font* - set `Hack Nerd Font Mono` - 16
+6. In GNOME Terminal *Preferences > Selenized Dark > Custom Font* - set `Hack Nerd Font Mono` - 16
 7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
 ## Tools and Applications
