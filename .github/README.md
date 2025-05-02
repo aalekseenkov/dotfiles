@@ -2,7 +2,9 @@
 
 Dotfiles are hidden configuration files in Unix-like systems that store settings for shells, editors, and other tools. By managing our dotfiles, we'll ensure a consistent experience across systems and save time reconfiguring tools.
 
-**All tools and configurations were tested under** `Linux Mint 22.1 Cinnamon`
+**All tools and configurations were tested under** `Linux Mint 22.1 Cinnamon`.
+
+Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.github/install.sh) to install and test this configuration in some seconds.
 
 ## GNOME Terminal
 
