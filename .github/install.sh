@@ -51,5 +51,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
 
 # change shell for current user
-chsh -s /bin/zsh
+CURRENT_USER="$USER"
+sudo chsh -s /bin/zsh $CURRENT_USER
 shutdown -r now
