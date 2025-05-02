@@ -181,7 +181,7 @@ let g:neosolarized_italic = 0
 let g:neosolarized_termBoldAsBright = 1
 
 " Plugin colorschemes
-colorscheme everforest
+silent! colorscheme everforest
 " colorscheme NeoSolarized
 " colorscheme PaperColor
 " colorscheme solarized8
