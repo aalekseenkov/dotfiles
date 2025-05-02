@@ -4,7 +4,10 @@ Dotfiles are hidden configuration files in Unix-like systems that store settings
 
 **All tools and configurations were tested under** `Linux Mint 22.1 Cinnamon`.
 
-Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.github/install.sh) to install and test this configuration in some seconds.
+Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.github/install.sh) into your newly home directory to install and test this configuration in some seconds:
+- `wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/install.sh`
+- `chmod u+x install.sh`
+- `bash install.sh`
 
 ## GNOME Terminal
 
