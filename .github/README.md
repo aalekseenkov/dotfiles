@@ -9,6 +9,8 @@ Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.gith
 - `chmod u+x install.sh`
 - `bash install.sh`
 
+![Dotfiles](./dotfiles.png)
+
 ## GNOME Terminal
 
 ### Gogh color's schemes
