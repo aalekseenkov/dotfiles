@@ -23,7 +23,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 
 ## Monospaced fonts
 
-### The collection of [powerline fonts](https://github.com/powerline/fonts/blob/master/README.rst)
+### The collection of 31 [powerline fonts](https://github.com/powerline/fonts/blob/master/README.rst)
 
 1. ```sudo apt update && sudo apt install -y git```
 2. ```git clone https://github.com/powerline/fonts.git --depth=1```
@@ -41,7 +41,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 11. Set the system monospace font to `Fira Mono for Powerline Regular` - 16
 12. In the Terminal's Font Preference, leave the Custom Font option unchecked, .i.e use system font
 
-### Only Hack Nerd Mono font
+### Only Hack from [Nerd fonts](https://www.nerdfonts.com/)
 
 1. ```sudo apt update && sudo apt-get install -y unzip curl```
 2. ```sudo mkdir -p /usr/share/fonts/Hack```
@@ -51,19 +51,13 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 6. In GNOME Terminal *Preferences > Selenized Dark > Custom Font* - set `Hack Nerd Font Mono` - 16
 7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
-## Tools and Applications
+## SysAdmin, DevOps and Developer Tools
 
 1. ```sudo apt update```
-
-### System Administration and DevOps
-
 2. ```sudo apt install -y git xclip tmux fzf zsh```
-
-### Development
-
 3. ```sudo apt install -y vim neovim```
 
-## Installing
+## Dotfiles Installing
 
 1. ```echo ".dotfiles" >> .gitignore```
 2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
@@ -71,10 +65,15 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 4. ```dotfiles config --local status.showUntrackedFiles no```
 5. ```mv .bashrc .bashrc.save```
 6. ```dotfiles checkout```
-7. ```exec bash```
+7. ```source ~/.bashrc```
 8. ```vim +PlugInstall +qall```
 9. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
 10. ```~/.tmux/plugins/tpm/bin/install_plugins```
+
+**You can change a shell for the current user to zsh:**
+
+11. chsh -s /bin/zsh
+12. shutdown -r now
 
 ## Additional actions (optional)
 
