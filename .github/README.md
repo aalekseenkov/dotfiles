@@ -67,11 +67,12 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 3. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
 4. ```dotfiles config --local status.showUntrackedFiles no```
 5. ```mv .bashrc .bashrc.save```
-6. ```dotfiles checkout```
-7. ```source ~/.bashrc```
-8. ```vim +PlugInstall +qall```
-9. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
-10. ```~/.tmux/plugins/tpm/bin/install_plugins```
+6. ```mv .zshrc .zshrc.save```
+7. ```dotfiles checkout```
+8. ```source ~/.bashrc```
+9. ```vim +PlugInstall +qall```
+10. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
+11. ```~/.tmux/plugins/tpm/bin/install_plugins```
 
 **You can change a shell for the current user to zsh:**
 
