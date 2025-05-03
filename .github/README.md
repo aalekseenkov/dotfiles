@@ -58,6 +58,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 1. ```sudo apt update```
 2. ```sudo apt install -y git xclip tmux fzf zsh```
 3. ```sudo apt install -y vim neovim```
+4. ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended```
 
 ## Dotfiles Installing
 
