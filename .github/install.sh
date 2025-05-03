@@ -33,6 +33,7 @@ rm -rf "$HOME/fonts"
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip curl wget
 sudo apt install -y tmux zsh vim neovim fzf
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # install dotfiles
 echo ".dotfiles" >> .gitignore
