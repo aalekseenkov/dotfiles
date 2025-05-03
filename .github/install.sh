@@ -41,6 +41,7 @@ git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 dotfiles config --local status.showUntrackedFiles no
 mv .bashrc .bashrc.save
+mv .zshrc .zshrc.save
 dotfiles checkout
 source ~/.bashrc
 
