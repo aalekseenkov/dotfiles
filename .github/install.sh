@@ -54,5 +54,5 @@ bash ~/.tmux/plugins/tpm/bin/install_plugins
 
 # change shell for current user
 CURRENT_USER="$USER"
-sudo chsh -s /bin/zsh $CURRENT_USER
-shutdown -r now
+sudo chsh -s /usr/bin/zsh $CURRENT_USER
+kill -9 -1
