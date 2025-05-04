@@ -31,8 +31,7 @@ bash "$HOME/fonts/install.sh"
 rm -rf "$HOME/fonts"
 
 # install CLI tools
-sudo apt install -y dconf-cli uuid-runtime xclip curl wget
-sudo apt install -y bat exa fzf || sudo apt install -y bat eza fzf
+sudo apt install -y dconf-cli uuid-runtime xclip curl wget bat eza fzf
 sudo apt install -y tmux zsh vim neovim
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
