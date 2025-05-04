@@ -25,13 +25,14 @@ rm apply-colors.sh
 rm ~/selenized-light.sh
 rm ~/selenized-dark.sh
 
-# install powerline fonts
-git clone https://github.com/powerline/fonts.git --depth=1
-bash "$HOME/fonts/install.sh"
-rm -rf "$HOME/fonts"
+# install Hack Nerd Font
+sudo apt update && sudo apt-get install -y unzip curl
+sudo mkdir -p /usr/share/fonts/Hack
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)
+sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip
 
 # install CLI tools
-sudo apt install -y dconf-cli uuid-runtime xclip curl wget bat eza fzf
+sudo apt install -y dconf-cli uuid-runtime xclip wget bat eza fzf
 sudo apt install -y tmux zsh vim neovim
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
