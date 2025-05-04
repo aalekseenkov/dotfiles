@@ -23,27 +23,9 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 ```
 3. Input the numbers of the themes: Selenized Dark, Selenized Light (`280 281`)
 
-## Monospaced fonts
+### Nerd Fonts
 
-### The collection of 31 [powerline fonts](https://github.com/powerline/fonts/blob/master/README.rst)
-
-1. ```sudo apt update && sudo apt install -y git```
-2. ```git clone https://github.com/powerline/fonts.git --depth=1```
-3. ```cd fonts```
-4. ```./install.sh```
-5. ```cd ..```
-6. ```rm -rf fonts```
-7. In GNOME Terminal *Preferences > Selenized Light > Custom Font* - set `Hack` - 16
-8. In GNOME Terminal *Preferences > Selenized Dark > Custom Font* - set `Hack` - 16
-9. In GNOME Terminal *Preferences* > set `Selenized Light` as default theme
-
-**To set the fonts that we can't see in the GNOME Terminal font's list (such as Fira):**
-
-10. Open Menu > Font Selection
-11. Set the system monospace font to `Fira Mono for Powerline Regular` - 16
-12. In the Terminal's Font Preference, leave the Custom Font option unchecked, .i.e use system font
-
-### Only Hack from [Nerd fonts](https://www.nerdfonts.com/)
+#### Hack Nerd Font
 
 1. ```sudo apt update && sudo apt-get install -y unzip curl```
 2. ```sudo mkdir -p /usr/share/fonts/Hack```
@@ -53,7 +35,9 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 6. In GNOME Terminal *Preferences > Selenized Dark > Custom Font* - set `Hack Nerd Font Mono` - 16
 7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
-## DevOps adn Sysadmin's Tools
+[All Nerd Fonts Downloads](https://www.nerdfonts.com/font-downloads)
+
+## DevOps and Sysadmin's Tools
 
 1. ```sudo apt update```
 2. ```sudo apt install -y git xclip tmux zsh bat eza fzf vim neovim```
