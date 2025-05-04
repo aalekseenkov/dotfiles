@@ -53,13 +53,11 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 6. In GNOME Terminal *Preferences > Selenized Dark > Custom Font* - set `Hack Nerd Font Mono` - 16
 7. In GNOME Terminal *Preferences* - set `Selenized Light` as default theme
 
-## SysAdmin, DevOps and Developer Tools
+## DevOps adn Sysadmin's Tools
 
 1. ```sudo apt update```
-2. ```sudo apt install -y git xclip tmux zsh```
-3. ```sudo apt install -y bat exa fzf || sudo apt install -y bat eza fzf```
-4. ```sudo apt install -y vim neovim```
-6. ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended```
+2. ```sudo apt install -y git xclip tmux zsh bat eza fzf vim neovim```
+3. ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended```
 
 ## Dotfiles Installing
 
