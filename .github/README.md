@@ -2,7 +2,7 @@
 
 Dotfiles are hidden configuration files in Unix-like systems that store settings for shells, editors, and other tools. By managing our dotfiles, we'll ensure a consistent experience across systems and save time reconfiguring tools.
 
-**All tools and configurations were tested under** `Linux Mint 22.1 Cinnamon`.
+**All tools and configurations were tested under** `Linux Mint 22.1` Cinnamon.
 
 Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.github/install.sh) into your newly home directory to install and test this configuration in some seconds:
 - `wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/install.sh`
@@ -75,8 +75,8 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 
 **You can change a shell for the current user to zsh:**
 
-11. chsh -s /bin/zsh
-12. shutdown -r now
+11. chsh -s /usr/bin/zsh
+12. kill -9 -1
 
 ## Additional actions (optional)
 
