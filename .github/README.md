@@ -56,9 +56,10 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 ## SysAdmin, DevOps and Developer Tools
 
 1. ```sudo apt update```
-2. ```sudo apt install -y git xclip tmux fzf zsh```
-3. ```sudo apt install -y vim neovim```
-4. ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended```
+2. ```sudo apt install -y git xclip tmux zsh```
+3. ```sudo apt install -y bat exa fzf || sudo apt install -y bat eza fzf```
+4. ```sudo apt install -y vim neovim```
+6. ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended```
 
 ## Dotfiles Installing
 
