@@ -67,8 +67,8 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
 3. ```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
 4. ```dotfiles config --local status.showUntrackedFiles no```
-5. ```mv .bashrc .bashrc.save```
-6. ```mv .zshrc .zshrc.save```
+5. ```test -e ~/.bashrc && mv ~/{.bashrc,.bashrc.save}```
+6. ```test -e ~/.zshrc && mv ~/{.zshrc,.zshrc.save}```
 7. ```dotfiles checkout```
 8. ```source ~/.bashrc```
 9. ```vim +PlugInstall +qall```
