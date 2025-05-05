@@ -1,10 +1,3 @@
-#============================================
-# Desc: .zshrc config for oh-my-zsh 
-# Author: Ivan Cherniy
-# Main site: https://r4ven.me
-# Config note: https://r4ven.me/zshrc-config
-#============================================
-
 #######################
 ### COMMON SETTINGS ###
 #######################
