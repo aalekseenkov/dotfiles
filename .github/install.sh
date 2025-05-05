@@ -12,6 +12,11 @@ sudo mkdir -p /usr/share/fonts/Hack
 curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)
 sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip
 
+# install SauceCodePro Nerd Font
+sudo mkdir -p /usr/share/fonts/SourceCodePro
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'SourceCodePro.zip' | cut -d '"' -f 4)
+sudo unzip ./SourceCodePro.zip -d /usr/share/fonts/SourceCodePro/ && rm -f ./SourceCodePro.zip
+
 # set the correct name for the default profile into Linux Mint Gnome Terminal
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$id/ visible-name 'Default'
@@ -34,7 +39,8 @@ rm ~/selenized-dark.sh
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
 for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ use-system-font false
-  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'Hack Nerd Font Mono 16'
+# gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'Hack Nerd Font Mono 16'
+  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'SauceCodePro Nerd Font Mono 18'
 done
 
 # install CLI tools
