@@ -62,9 +62,9 @@ sudo apt install -y tmux zsh vim neovim mc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Install Catppuccin Frappe Theme for BAT
-mkdir -p "$(bat --config-dir)/themes"
-wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
-bat cache --build
+sudo mkdir -p "$(bat --config-dir)/themes"
+sudo wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
+# bat cache --build
 
 # install dotfiles
 echo ".dotfiles" >> .gitignore
