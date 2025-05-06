@@ -7,15 +7,15 @@ shopt -s expand_aliases
 sudo apt update
 sudo apt install -y git unzip curl
 
-# install RobotoMono Nerd Font
-sudo mkdir -p /usr/share/fonts/RobotoMono
-curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'RobotoMono.zip' | cut -d '"' -f 4)
-sudo unzip ./RobotoMono.zip -d /usr/share/fonts/RobotoMono/ && rm -f ./RobotoMono.zip
-
 # install JetBrainsMono Nerd Font
 sudo mkdir -p /usr/share/fonts/JetBrainsMono
 curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'JetBrainsMono.zip' | cut -d '"' -f 4)
 sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./JetBrainsMono.zip
+
+# install RobotoMono Nerd Font
+sudo mkdir -p /usr/share/fonts/RobotoMono
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'RobotoMono.zip' | cut -d '"' -f 4)
+sudo unzip ./RobotoMono.zip -d /usr/share/fonts/RobotoMono/ && rm -f ./RobotoMono.zip
 
 # install Hack Nerd Font
 sudo mkdir -p /usr/share/fonts/Hack
@@ -38,23 +38,29 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 # install Gogh's colorschemes
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-light.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-dark.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-frappe.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-latte.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-macchiato.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-mocha.sh
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
-bash ~/selenized-light.sh
-bash ~/selenized-dark.sh 
+bash ~/catppuccin-frappe.sh
+bash ~/catppuccin-latte.sh
+bash ~/catppuccin-macchiato.sh
+bash ~/catppuccin-mocha.sh
 rm apply-colors.sh
-rm ~/selenized-light.sh
-rm ~/selenized-dark.sh
+rm ~/catppuccin-frappe.sh
+rm ~/catppuccin-latte.sh
+rm ~/catppuccin-macchiato.sh
+rm ~/catppuccin-mocha.sh
 
 # set the font and its size into all the profiles
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
 for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ use-system-font false
-  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'RobotoMono Nerd Font Mono 16'
+  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'JetBrainsMono Nerd Font Mono 16'
 done
 
 # install CLI tools
