@@ -162,7 +162,7 @@ fi
 # Usage bat instead of cat, less, man, --help, tail -f
 if [[ -n $bat ]]; then
     export COLORTERM="truecolor"
-    export BAT_THEME="Solarized (light)"
+    export BAT_THEME="Catppuccin Frappe"
     export MANPAGER="sh -c 'col -bx | $bat --language=man --style=plain'"  # Command to view man pages
     export MANROFFOPT="-c"  # Disabling line wrapping in man
     alias cat="$bat --style=plain --paging=never"
