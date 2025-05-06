@@ -39,22 +39,13 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 # install Gogh's colorschemes
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-frappe.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-latte.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-macchiato.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-mocha.sh
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
 bash ~/catppuccin-frappe.sh
-bash ~/catppuccin-latte.sh
-bash ~/catppuccin-macchiato.sh
-bash ~/catppuccin-mocha.sh
 rm apply-colors.sh
 rm ~/catppuccin-frappe.sh
-rm ~/catppuccin-latte.sh
-rm ~/catppuccin-macchiato.sh
-rm ~/catppuccin-mocha.sh
 
 # set the font and its size into all the profiles
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
@@ -65,8 +56,15 @@ done
 
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget bat eza fzf
-sudo apt install -y tmux zsh vim neovim
+sudo apt install -y tmux zsh vim neovim mc
+
+# Install OMZ
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# Install Catppuccin Frappe Theme for BAT
+mkdir -p "$(bat --config-dir)/themes"
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
+bat cache --build
 
 # install dotfiles
 echo ".dotfiles" >> .gitignore
