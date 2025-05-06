@@ -7,25 +7,30 @@ shopt -s expand_aliases
 sudo apt update
 sudo apt install -y git unzip curl
 
-# install SauceCodePro Nerd Font
-sudo mkdir -p /usr/share/fonts/SourceCodePro
-curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'SourceCodePro.zip' | cut -d '"' -f 4)
-sudo unzip ./SourceCodePro.zip -d /usr/share/fonts/SourceCodePro/ && rm -f ./SourceCodePro.zip
-
 # install RobotoMono Nerd Font
 sudo mkdir -p /usr/share/fonts/RobotoMono
 curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'RobotoMono.zip' | cut -d '"' -f 4)
 sudo unzip ./RobotoMono.zip -d /usr/share/fonts/RobotoMono/ && rm -f ./RobotoMono.zip
+
+# install JetBrainsMono Nerd Font
+sudo mkdir -p /usr/share/fonts/JetBrainsMono
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'JetBrainsMono.zip' | cut -d '"' -f 4)
+sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./JetBrainsMono.zip
+
+# install Hack Nerd Font
+sudo mkdir -p /usr/share/fonts/Hack
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)
+sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip
 
 # install FiraCode Nerd Font
 sudo mkdir -p /usr/share/fonts/FiraCode
 curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'FiraCode.zip' | cut -d '"' -f 4)
 sudo unzip ./FiraCode.zip -d /usr/share/fonts/FiraCode/ && rm -f ./FiraCode.zip
 
-# install Hack Nerd Font
-sudo mkdir -p /usr/share/fonts/Hack
-curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Hack.zip' | cut -d '"' -f 4)
-sudo unzip ./Hack.zip -d /usr/share/fonts/Hack/ && rm -f ./Hack.zip
+# install SauceCodePro Nerd Font
+sudo mkdir -p /usr/share/fonts/SourceCodePro
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'SourceCodePro.zip' | cut -d '"' -f 4)
+sudo unzip ./SourceCodePro.zip -d /usr/share/fonts/SourceCodePro/ && rm -f ./SourceCodePro.zip
 
 # set the correct name for the default profile into Linux Mint Gnome Terminal
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
