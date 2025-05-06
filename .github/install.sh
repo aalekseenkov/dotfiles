@@ -61,11 +61,6 @@ sudo apt install -y tmux zsh vim neovim mc
 # Install OMZ
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# Install Catppuccin Frappe Theme for BAT
-sudo mkdir -p "$(bat --config-dir)/themes"
-sudo wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
-# bat cache --build
-
 # install dotfiles
 echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles
@@ -82,6 +77,11 @@ vim +PlugInstall +qall
 # install tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
+
+# Install Catppuccin Frappe Theme for BAT
+mkdir -p "$(bat --config-dir)/themes"
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
+bat cache --build
 
 # change shell for current user
 CURRENT_USER="$USER"
