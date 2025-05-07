@@ -66,6 +66,11 @@ mkdir -p "$(batcat --config-dir)/themes"
 wget -P "$(batcat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
 batcat cache --build
 
+# Install Catppuccin Frappe Theme for EZA
+mkdir -p ~/.config/eza
+wget -P ~/.config/eza/ https://raw.githubusercontent.com/eza-community/eza-themes/refs/heads/main/themes/catppuccin.yml
+mv ~/.config/eza/catppuccin.yml ~/.config/eza/theme.yml
+
 # install dotfiles
 echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles
