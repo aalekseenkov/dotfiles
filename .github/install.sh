@@ -55,7 +55,7 @@ for i in ${!profiles[*]}; do
 done
 
 # install CLI tools
-sudo apt install -y dconf-cli uuid-runtime xclip wget bat eza fzf
+sudo apt install -y dconf-cli uuid-runtime xclip wget bat fzf
 sudo apt install -y tmux zsh vim neovim mc
 
 # Install OMZ
@@ -66,10 +66,14 @@ mkdir -p "$(batcat --config-dir)/themes"
 wget -P "$(batcat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
 batcat cache --build
 
-# Install Catppuccin Frappe Theme for EZA
-mkdir -p ~/.config/eza
-wget -P ~/.config/eza/ https://raw.githubusercontent.com/eza-community/eza-themes/refs/heads/main/themes/catppuccin.yml
-mv ~/.config/eza/catppuccin.yml ~/.config/eza/theme.yml
+# Install the latest verion of EZA
+sudo apt install -y gpg
+sudo mkdir -p /etc/apt/keyrings
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+sudo apt update
+sudo apt install -y eza
 
 # install dotfiles
 echo ".dotfiles" >> .gitignore
