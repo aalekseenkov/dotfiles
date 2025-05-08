@@ -39,13 +39,28 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 # install Gogh's colorschemes
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-frappe.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/chalk.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/everforest-dark-hard.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/gogh.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/relaxed.sh
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
 bash ~/catppuccin-frappe.sh
+bash ~/chalk.sh
+bash ~/everforest-dark-hard.sh
+bash ~/gogh.sh
+bash ~/nord.sh
+bash ~/relaxed.sh
 rm apply-colors.sh
 rm ~/catppuccin-frappe.sh
+bash ~/chalk.sh
+bash ~/everforest-dark-hard.sh
+bash ~/gogh.sh
+bash ~/nord.sh
+bash ~/relaxed.sh
 
 # set the font and its size into all the profiles
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
