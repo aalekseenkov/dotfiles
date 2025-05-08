@@ -56,11 +56,11 @@ bash ~/nord.sh
 bash ~/relaxed.sh
 rm apply-colors.sh
 rm ~/catppuccin-frappe.sh
-bash ~/chalk.sh
-bash ~/everforest-dark-hard.sh
-bash ~/gogh.sh
-bash ~/nord.sh
-bash ~/relaxed.sh
+rm ~/chalk.sh
+rm ~/everforest-dark-hard.sh
+rm ~/gogh.sh
+rm ~/nord.sh
+rm ~/relaxed.sh
 
 # set the font and its size into all the profiles
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
