@@ -139,17 +139,27 @@ elif [[ -x $(which vim) ]]; then
     alias V="sudo vim"
 fi
 
-# Configure FZF with Catppuccin Frappe theme colors
+# Configure FZF with Nord theme colors
 if [[ -x $(which fzf) ]]; then
     export FZF_DEFAULT_OPTS="--exact"
     export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-        --color=fg:#C6D0F5,fg+:#C6D0F5,bg:#303446,bg+:#414559
-        --color=hl:#E78284,hl+:#E78284,info:#CA9EE6,marker:#BABBF1
-        --color=prompt:#CA9EE6,spinner:#F2D5CF,pointer:#F2D5CF,header:#E78284
-        --color=border:#414559,label:#C6D0F5,query:#C6D0F5
-      	--border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
-        --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+        --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
+        --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+        --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+        --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 fi
+
+# Configure FZF with Catppuccin Frappe theme colors
+# if [[ -x $(which fzf) ]]; then
+#     export FZF_DEFAULT_OPTS="--exact"
+#     export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#         --color=fg:#C6D0F5,fg+:#C6D0F5,bg:#303446,bg+:#414559
+#         --color=hl:#E78284,hl+:#E78284,info:#CA9EE6,marker:#BABBF1
+#         --color=prompt:#CA9EE6,spinner:#F2D5CF,pointer:#F2D5CF,header:#E78284
+#         --color=border:#414559,label:#C6D0F5,query:#C6D0F5
+#         --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+#         --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+# fi
 
 # Defining a variable with the name of the utility: bat or batcat
 if [[ -e $(which batcat) ]]; then
@@ -162,7 +172,8 @@ fi
 # Usage bat instead of cat, less, man, --help, tail -f
 if [[ -n $bat ]]; then
     export COLORTERM="truecolor"
-    export BAT_THEME="Catppuccin Frappe"
+    export BAT_THEME="Nord"
+#   export BAT_THEME="Catppuccin Frappe"
     export MANPAGER="sh -c 'col -bx | $bat --language=man --style=plain'"  # Command to view man pages
     export MANROFFOPT="-c"  # Disabling line wrapping in man
     alias cat="$bat --style=plain --paging=never"
