@@ -36,24 +36,24 @@ sudo unzip ./SourceCodePro.zip -d /usr/share/fonts/SourceCodePro/ && rm -f ./Sou
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$id/ visible-name 'Default'
 
+# install Nord
+wget https://raw.githubusercontent.com/nordtheme/gnome-terminal/refs/heads/develop/src/nord.sh
+chmod u+x ~/nord.sh
+bash ~/nord.sh
+rm ~/nord.sh
+
 # install Gogh's colorschemes
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-frappe.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/blue-moon-light.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/gogh.sh
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
-bash ~/nord.sh
 bash ~/catppuccin-frappe.sh
-bash ~/blue-moon-light.sh
 bash ~/gogh.sh
 rm apply-colors.sh
-rm ~/nord.sh
 rm ~/catppuccin-frappe.sh
-rm ~/blue-moon-light.sh
 rm ~/gogh.sh
 
 # set the font and its size into all the profiles
