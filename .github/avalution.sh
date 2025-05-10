@@ -21,9 +21,9 @@ export COLOR_15="#5497A8"           # Bright Cyan
 export COLOR_16="#B8BFC7"           # Bright White
 
 export BACKGROUND_COLOR="#36516C"   # Background
-export FOREGROUND_COLOR="#F5F8FC"   # Foreground (Text)
+export FOREGROUND_COLOR="#CDDEF0"   # Foreground (Text)
 
-export CURSOR_COLOR="#F5F8FC" # Cursor
+export CURSOR_COLOR="#CDDEF0" # Cursor
 
 apply_theme() {
     if [[ -e "${GOGH_APPLY_SCRIPT}" ]]; then
