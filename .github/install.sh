@@ -21,40 +21,32 @@ sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./Jet
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$id/ visible-name 'Default'
 
-# install Gogh's colorschemes
+# install Gogh's colorschemes Nord and Novel (optional)
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
-# wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/catppuccin-frappe.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/novel.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/paper.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/papercolor-light.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
+# wget https://github.com/Gogh-Co/Gogh/raw/master/installs/novel.sh
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
-# bash ~/nord.sh
-bash ~/catppuccin-frappe.sh
-bash ~/novel.sh
-bash ~/paper.sh
-bash ~/papercolor-light.sh
-rm apply-colors.sh
-# rm ~/nord.sh
-rm ~/catppuccin-frappe.sh
-rm ~/novel.sh
-rm ~/paper.sh
-rm ~/papercolor-light.sh
-
-# install original Nord colorscheme
-wget https://raw.githubusercontent.com/nordtheme/gnome-terminal/refs/heads/develop/src/nord.sh
-chmod u+x ~/nord.sh
 bash ~/nord.sh
+# bash ~/novel.sh
+rm apply-colors.sh
 rm ~/nord.sh
+# rm ~/novel.sh
+
+# install original Nord colorscheme (to compare in the future)
+# wget https://raw.githubusercontent.com/nordtheme/gnome-terminal/refs/heads/develop/src/nord.sh
+# chmod u+x ~/nord.sh
+# bash ~/nord.sh
+# rm ~/nord.sh
 
 # set the font and its size into all the profiles
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
 for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ use-system-font false
-  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'JetBrainsMono Nerd Font Mono 16'
+  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'RobotoMono Nerd Font Mono 16'
+  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ cell-height-scale 1.2
 done
 
 # install CLI tools
