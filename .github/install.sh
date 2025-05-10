@@ -21,19 +21,19 @@ sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./Jet
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$id/ visible-name 'Default'
 
-# install Gogh's colorschemes Nord and Novel (optional)
+# install Gogh's colorschemes Nord and Avalution
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
-# wget https://github.com/Gogh-Co/Gogh/raw/master/installs/novel.sh
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
+bash ~/avalution.sh
 bash ~/nord.sh
-# bash ~/novel.sh
 rm apply-colors.sh
+rm ~/avalution.sh
 rm ~/nord.sh
-# rm ~/novel.sh
 
 # install original Nord colorscheme (to compare in the future)
 # wget https://raw.githubusercontent.com/nordtheme/gnome-terminal/refs/heads/develop/src/nord.sh
