@@ -4,20 +4,20 @@ export PROFILE_NAME="Avalution"
 
 export COLOR_01="#334D67"           # Black (Host)
 export COLOR_02="#F17C78"           # Red (Syntax string)
-export COLOR_03="#97D169"           # Green (Command)
-export COLOR_04="#F1BF78"           # Yellow (Command second)
+export COLOR_03="#68D0AB"           # Green (Command)
+export COLOR_04="#F1D078"           # Yellow (Command second)
 export COLOR_05="#6699CC"           # Blue (Path)
 export COLOR_06="#D6C7DD"           # Magenta (Syntax var)
-export COLOR_07="#5497A8"           # Cyan (Prompt)
+export COLOR_07="#6ABED4"           # Cyan (Prompt)
 export COLOR_08="#B8BFC7"           # White
 
 export COLOR_09="#5179A2"           # Bright Black
 export COLOR_10="#F17C78"           # Bright Red (Command error)
-export COLOR_11="#97D169"           # Bright Green (Exec)
-export COLOR_12="#F1BF78"           # Bright Yellow
+export COLOR_11="#68D0AB"           # Bright Green (Exec)
+export COLOR_12="#F1D078"           # Bright Yellow
 export COLOR_13="#6699CC"           # Bright Blue (Folder)
 export COLOR_14="#D6C7DD"           # Bright Magenta
-export COLOR_15="#66B7CC"           # Bright Cyan
+export COLOR_15="#6ABED4"           # Bright Cyan
 export COLOR_16="#B8BFC7"           # Bright White
 
 export BACKGROUND_COLOR="#36516C"   # Background
