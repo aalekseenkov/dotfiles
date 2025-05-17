@@ -2,7 +2,7 @@
 
 export PROFILE_NAME="Avalution Mono"
 
-export COLOR_01="#334D67"           # Black (Host)
+export COLOR_01="#2B4156"           # Black (Host)
 export COLOR_02="#F19378"           # Red (Syntax string)
 export COLOR_03="#6ABED4"           # Green (Command)
 export COLOR_04="#70CAE1"           # Yellow (Command second)
@@ -20,7 +20,7 @@ export COLOR_14="#68D0AB"           # Bright Magenta
 export COLOR_15="#68ACD0"           # Bright Cyan
 export COLOR_16="#B8BFC7"           # Bright White
 
-export BACKGROUND_COLOR="#334D67"   # Background
+export BACKGROUND_COLOR="#2B4156"   # Background
 export FOREGROUND_COLOR="#D6E6F5"   # Foreground (Text)
 
 export CURSOR_COLOR="#D6E6F5" # Cursor
