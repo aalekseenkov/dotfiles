@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PROFILE_NAME="Avalution Monochrome"
+export PROFILE_NAME="Avalution Mono"
 
 export COLOR_01="#334D67"           # Black (Host)
 export COLOR_02="#F19378"           # Red (Syntax string)
