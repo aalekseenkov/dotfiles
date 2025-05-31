@@ -4,6 +4,8 @@ Dotfiles are hidden configuration files in Unix-like systems that store settings
 
 **All tools and configurations were tested under** `Linux Mint 22.1` Cinnamon.
 
+## Automatic Installation
+
 Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.github/install.sh) into your newly home directory to install and test this configuration in some seconds:
 - `wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/install.sh`
 - `chmod u+x install.sh`
@@ -11,9 +13,11 @@ Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.gith
 
 ![Dotfiles](./dotfiles.png)
 
-## GNOME Terminal
+## Manual Installation
 
-### Gogh color's schemes
+### GNOME Terminal
+
+#### Gogh color's schemes
 
 1. In GNOME Terminal *Preferences* rename `Unnamed` Profile's name to `Default`
 2. Run pre-install and the Gogh script's commands
@@ -23,9 +27,9 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 ```
 3. Input the numbers of the themes: Selenized Dark, Selenized Light (`280 281`)
 
-### Nerd Fonts
+#### Nerd Fonts
 
-#### Hack Nerd Font
+##### Hack Nerd Font
 
 1. ```sudo apt update && sudo apt-get install -y unzip curl```
 2. ```sudo mkdir -p /usr/share/fonts/Hack```
@@ -37,13 +41,13 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 
 [All Nerd Fonts Downloads](https://www.nerdfonts.com/font-downloads)
 
-## DevOps and Sysadmin's Tools
+### DevOps and Sysadmin's Tools
 
 1. ```sudo apt update```
 2. ```sudo apt install -y git xclip tmux zsh bat eza fzf vim neovim```
 3. ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended```
 
-## Dotfiles Installing
+### Dotfiles Installing
 
 1. ```echo ".dotfiles" >> .gitignore```
 2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
@@ -59,8 +63,8 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 
 **You can change a shell for the current user to zsh:**
 
-11. chsh -s /usr/bin/zsh
-12. kill -9 -1
+12. chsh -s /usr/bin/zsh
+13. kill -9 -1
 
 ## Additional actions (optional)
 
