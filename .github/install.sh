@@ -23,23 +23,26 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 # install Gogh's colorschemes Nord and Avalution
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-mono.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-nostalgia.sh
+# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution.sh
+# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-mono.sh
+# wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
-bash ~/avalution.sh
-bash ~/avalution-mono.sh
-bash ~/avalution-pine-green.sh
-bash ~/nord.sh
+# bash ~/avalution.sh
+# bash ~/avalution-mono.sh
+# bash ~/nord.sh
+bash ~/avalution-pine.sh
+bash ~/avalution-nostalgia.sh
 rm apply-colors.sh
-rm ~/avalution.sh
-rm ~/avalution-mono.sh
-rm ~/avalution-pine-green.sh
-rm ~/nord.sh
+rm ~/avalution-pine.sh
+rm ~/avalution-nostalgia.sh
+# rm ~/avalution.sh
+# rm ~/avalution-mono.sh
+# rm ~/nord.sh
 
 # install original Nord colorscheme (to compare in the future)
 # wget https://raw.githubusercontent.com/nordtheme/gnome-terminal/refs/heads/develop/src/nord.sh
