@@ -16,10 +16,10 @@ export TERM="xterm-256color"               # Set terminal type for better color 
 # Oh-my-zsh theme selection
 # Find more themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 if [[ -n "$DISPLAY" || $(tty) == /dev/pts* ]]; then
-    ZSH_THEME="gnzh"                       # Use this theme in GUI mode
+    ZSH_THEME="dpoggi"                     # Use this theme in GUI mode
     export VIRTUAL_ENV_DISABLE_PROMPT=1    # Disable default virtualenv prompt
 else
-    ZSH_THEME="dpoggi"                     # Use the 'noicon' theme in other cases, e.g. in console (tty)
+    ZSH_THEME="gnzh"                       # Use the 'noicon' theme in other cases, e.g. in console (tty)
 fi
 
 # Powerlevel10k theme (requires installation)
