@@ -3,27 +3,27 @@
 export PROFILE_NAME="Avalution Nostalgia"
 
 export COLOR_01="#147A7D"           # Black (Host)
-export COLOR_02="#D8EFF0"           # Red (Syntax string)
-export COLOR_03="#D8EFF0"           # Green (Command)
-export COLOR_04="#D8EFF0"           # Yellow (Command second)
-export COLOR_05="#D8EFF0"           # Blue (Path)
-export COLOR_06="#D8EFF0"           # Magenta (Syntax var)
-export COLOR_07="#D8EFF0"           # Cyan (Prompt)
-export COLOR_08="#D8EFF0"           # White
+export COLOR_02="#E9EFEF"           # Red (Syntax string)
+export COLOR_03="#E9EFEF"           # Green (Command)
+export COLOR_04="#E9EFEF"           # Yellow (Command second)
+export COLOR_05="#E9EFEF"           # Blue (Path)
+export COLOR_06="#E9EFEF"           # Magenta (Syntax var)
+export COLOR_07="#E9EFEF"           # Cyan (Prompt)
+export COLOR_08="#E9EFEF"           # White
 
-export COLOR_09="#D8EFF0"           # Bright Black
-export COLOR_10="#D8EFF0"           # Bright Red (Command error)
-export COLOR_11="#D8EFF0"           # Bright Green (Exec)
-export COLOR_12="#D8EFF0"           # Bright Yellow
-export COLOR_13="#D8EFF0"           # Bright Blue (Folder)
-export COLOR_14="#D8EFF0"           # Bright Magenta
-export COLOR_15="#D8EFF0"           # Bright Cyan
-export COLOR_16="#D8EFF0"           # Bright White
+export COLOR_09="#E9EFEF"           # Bright Black
+export COLOR_10="#E9EFEF"           # Bright Red (Command error)
+export COLOR_11="#E9EFEF"           # Bright Green (Exec)
+export COLOR_12="#E9EFEF"           # Bright Yellow
+export COLOR_13="#E9EFEF"           # Bright Blue (Folder)
+export COLOR_14="#E9EFEF"           # Bright Magenta
+export COLOR_15="#E9EFEF"           # Bright Cyan
+export COLOR_16="#E9EFEF"           # Bright White
 
 export BACKGROUND_COLOR="#147A7D"   # Background
-export FOREGROUND_COLOR="#D8EFF0"   # Foreground (Text)
+export FOREGROUND_COLOR="#E9EFEF"   # Foreground (Text)
 
-export CURSOR_COLOR="#D8EFF0" # Cursor
+export CURSOR_COLOR="#E9EFEF" # Cursor
 
 apply_theme() {
     if [[ -e "${GOGH_APPLY_SCRIPT}" ]]; then
