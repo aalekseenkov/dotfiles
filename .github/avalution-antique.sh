@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PROFILE_NAME="AVA Antique Green"
+export PROFILE_NAME="AVA Antique"
 
 export COLOR_01="#FFFAED"           # Black (Host)
 export COLOR_02="#29675C"           # Red (Syntax string)
