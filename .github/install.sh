@@ -23,7 +23,6 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 # install Gogh's colorschemes Nord and Avalution
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/tomorrow.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-antique-green.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-blueberry-violet.sh
@@ -40,13 +39,13 @@ wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/aval
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-flower.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-indigo.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-purple.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/tomorrow.sh
 
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
 
 chmod u+x ~/apply-colors.sh
-bash ~/tomorrow.sh
 bash ~/avalution.sh
 bash ~/avalution-antique-green.sh
 bash ~/avalution-blueberry-violet.sh
@@ -64,9 +63,9 @@ bash ~/avalution-violet-flower.sh
 bash ~/avalution-violet-indigo.sh
 bash ~/avalution-violet-purple.sh
 bash ~/avalution-violet-purple.sh
+bash ~/tomorrow.sh
 
 rm apply-colors.sh
-rm ~/tomorrow.sh
 rm ~/avalution.sh
 rm ~/avalution-antique-green.sh
 rm ~/avalution-blueberry-violet.sh
@@ -83,6 +82,7 @@ rm ~/avalution-violet-dusk.sh
 rm ~/avalution-violet-flower.sh
 rm ~/avalution-violet-indigo.sh
 rm ~/avalution-violet-purple.sh
+rm ~/tomorrow.sh
 
 # install original Nord colorscheme (to compare in the future)
 # wget https://raw.githubusercontent.com/nordtheme/gnome-terminal/refs/heads/develop/src/nord.sh
@@ -106,7 +106,7 @@ sudo apt install -y tmux zsh vim neovim mc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Install Agnoster4Avalution
-curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o ~/.oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
+curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o ~/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
 
 # Install Catppuccin Frappe Theme for BAT
 mkdir -p "$(batcat --config-dir)/themes"
@@ -141,9 +141,10 @@ bash ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install fish + omf
 sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt-get update
-sudo apt-get install -y fish
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+sudo apt update
+sudo apt install -y --quiet fish
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > install
+fish install --noninteractive --yes
 
 # change shell for current user
 # CURRENT_USER="$USER"
