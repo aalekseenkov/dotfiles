@@ -143,7 +143,7 @@ bash ~/.tmux/plugins/tpm/bin/install_plugins
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update
 sudo apt-get install -y fish
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 
 # change shell for current user
 # CURRENT_USER="$USER"
