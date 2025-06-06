@@ -106,7 +106,7 @@ sudo apt install -y tmux zsh vim neovim mc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Install Agnoster4Avalution
-curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $ZSH/custom/themes/agnoster4avalution.zsh-theme
+curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o ~/.oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
 
 # Install Catppuccin Frappe Theme for BAT
 mkdir -p "$(batcat --config-dir)/themes"
