@@ -102,12 +102,6 @@ done
 sudo apt install -y dconf-cli uuid-runtime xclip wget bat fzf
 sudo apt install -y tmux zsh vim neovim mc
 
-# Install fish + omf
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt-get update
-sudo apt-get install fish
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
-
 # Install OMZ
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -144,6 +138,12 @@ vim +PlugInstall +qall
 # install tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
+
+# Install fish + omf
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt-get update
+sudo apt-get install -y fish
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install
 
 # change shell for current user
 # CURRENT_USER="$USER"
