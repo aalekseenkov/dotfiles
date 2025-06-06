@@ -23,32 +23,66 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 # install Gogh's colorschemes Nord and Avalution
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green-4-blue-tinge.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-antique-green.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-nostalgia.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/tomorrow.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-antique-green.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-blueberry-violet.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-deep-violet.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-hibiscus-purple.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-midnight-orchid.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-mono.sh
-# wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-nostalgia.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green-4-blue-tinge.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-purple-rain.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-twilight-lavender.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-dusk.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-flower.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-indigo.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-purple.sh
+
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
 export GOGH_USE_NEW_THEME=
+
 chmod u+x ~/apply-colors.sh
-bash ~/avalution-pine-green-4-blue-tinge.sh
-bash ~/avalution-antique-green.sh
-bash ~/avalution-pine-green.sh
-bash ~/avalution-nostalgia.sh
+bash ~/tomorrow.sh
 bash ~/avalution.sh
+bash ~/avalution-antique-green.sh
+bash ~/avalution-blueberry-violet.sh
+bash ~/avalution-deep-violet.sh
+bash ~/avalution-hibiscus-purple.sh
+bash ~/avalution-midnight-orchid.sh
 bash ~/avalution-mono.sh
-# bash ~/nord.sh
+bash ~/avalution-nostalgia.sh
+bash ~/avalution-pine-green-4-blue-tinge.sh
+bash ~/avalution-pine-green.sh
+bash ~/avalution-purple-rain.sh
+bash ~/avalution-twilight-lavender.sh
+bash ~/avalution-violet-dusk.sh
+bash ~/avalution-violet-flower.sh
+bash ~/avalution-violet-indigo.sh
+bash ~/avalution-violet-purple.sh
+bash ~/avalution-violet-purple.sh
+
 rm apply-colors.sh
-rm ~/avalution-pine-green-4-blue-tinge.sh
-rm ~/avalution-antique-green.sh
-rm ~/avalution-pine-green.sh
-rm ~/avalution-nostalgia.sh
+rm ~/tomorrow.sh
 rm ~/avalution.sh
+rm ~/avalution-antique-green.sh
+rm ~/avalution-blueberry-violet.sh
+rm ~/avalution-deep-violet.sh
+rm ~/avalution-hibiscus-purple.sh
+rm ~/avalution-midnight-orchid.sh
 rm ~/avalution-mono.sh
-# rm ~/nord.sh
+rm ~/avalution-nostalgia.sh
+rm ~/avalution-pine-green-4-blue-tinge.sh
+rm ~/avalution-pine-green.sh
+rm ~/avalution-purple-rain.sh
+rm ~/avalution-twilight-lavender.sh
+rm ~/avalution-violet-dusk.sh
+rm ~/avalution-violet-flower.sh
+rm ~/avalution-violet-indigo.sh
+rm ~/avalution-violet-purple.sh
 
 # install original Nord colorscheme (to compare in the future)
 # wget https://raw.githubusercontent.com/nordtheme/gnome-terminal/refs/heads/develop/src/nord.sh
@@ -67,6 +101,12 @@ done
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget bat fzf
 sudo apt install -y tmux zsh vim neovim mc
+
+# Install fish + omf
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt-get update
+sudo apt-get install fish
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 
 # Install OMZ
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -106,6 +146,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
 
 # change shell for current user
-CURRENT_USER="$USER"
-sudo chsh -s /usr/bin/zsh $CURRENT_USER
+# CURRENT_USER="$USER"
+# sudo chsh -s /usr/bin/zsh $CURRENT_USER
 kill -9 -1
