@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PROFILE_NAME="Avalution (Pine Green)"
+export PROFILE_NAME="Avalution Pine Green"
 
 export COLOR_01="#158078"           # Black (Host)
 export COLOR_02="#E9EFEE"           # Red (Syntax string)
