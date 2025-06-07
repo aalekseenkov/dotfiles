@@ -98,6 +98,14 @@ for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ cell-height-scale 1.1
 done
 
+# Install fish + omf
+sudo add-apt-repository --yes ppa:fish-shell/release-4
+sudo apt update
+sudo apt install -y --quiet fish
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > ~/fish_install
+fish ~/fish_install --noninteractive --yes
+rm ~/fish_install
+
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget bat fzf
 sudo apt install -y tmux zsh vim neovim mc
@@ -140,15 +148,7 @@ vim +PlugInstall +qall
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
 
-# Install fish + omf
-sudo add-apt-repository --yes ppa:fish-shell/release-4
-sudo apt update
-sudo apt install -y --quiet fish
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > ~/fish_install
-fish ~/fish_install --noninteractive --yes
-rm ~/fish_install
-
 # change shell for current user
-# CURRENT_USER="$USER"
+CURRENT_USER="$USER"
 sudo chsh -s /usr/bin/zsh $CURRENT_USER
 kill -9 -1
