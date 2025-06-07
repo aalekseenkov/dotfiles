@@ -144,8 +144,9 @@ bash ~/.tmux/plugins/tpm/bin/install_plugins
 sudo add-apt-repository ppa:fish-shell/release-4 > /dev/null 2>&1
 sudo apt update
 sudo apt install -y --quiet fish
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install fish_install
-fish fish_install --yes
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install ~/fish_install
+fish ~/fish_install --noninteractive
+rm ~/fish_install
 
 # change shell for current user
 # CURRENT_USER="$USER"
