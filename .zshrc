@@ -16,8 +16,8 @@ export TERM="xterm-256color"               # Set terminal type for better color 
 # Oh-my-zsh theme selection
 # Find more themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 if [[ -n "$DISPLAY" || $(tty) == /dev/pts* ]]; then
-    ZSH_THEME="agnoster4avalution"         # Use this theme in GUI mode
-#   ZSH_THEME="agnoster"                   # Use this theme in GUI mode
+#   ZSH_THEME="agnoster4avalution"         # Use this theme in GUI mode
+    ZSH_THEME="agnoster"                   # Use this theme in GUI mode
 #   ZSH_THEME="gnzh"                       # Use this theme in GUI mode
 #   ZSH_THEME="lambda"                     # Use this theme in GUI mode
     export VIRTUAL_ENV_DISABLE_PROMPT=1    # Disable default virtualenv prompt
