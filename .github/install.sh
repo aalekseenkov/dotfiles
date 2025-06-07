@@ -141,11 +141,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install fish + omf
-sudo add-apt-repository ppa:fish-shell/release-4 > /dev/null 2>&1
+sudo add-apt-repository --yes ppa:fish-shell/release-4
 sudo apt update
 sudo apt install -y --quiet fish
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install ~/fish_install
-fish ~/fish_install --noninteractive
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > ~/fish_install
+fish ~/fish_install --noninteractive --yes
 rm ~/fish_install
 
 # change shell for current user
