@@ -106,8 +106,8 @@ sudo apt install -y tmux zsh vim neovim mc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Install Agnoster4Avalution
-mkdir -p "$HOME/.config/oh-my-zsh/custom/themes"
-curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
+# mkdir -p "$HOME/.config/oh-my-zsh/custom/themes"
+# curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
 
 # Install Catppuccin Frappe Theme for BAT
 mkdir -p "$(batcat --config-dir)/themes"
@@ -141,11 +141,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install fish + omf
-sudo apt-add-repository ppa:fish-shell/release-3
+sudo add-apt-repository ppa:fish-shell/release-4
 sudo apt update
 sudo apt install -y --quiet fish
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > install
-fish install --noninteractive --yes
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish -y
 
 # change shell for current user
 # CURRENT_USER="$USER"
