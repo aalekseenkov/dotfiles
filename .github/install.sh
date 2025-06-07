@@ -150,5 +150,5 @@ rm ~/fish_install
 
 # change shell for current user
 # CURRENT_USER="$USER"
-# sudo chsh -s /usr/bin/zsh $CURRENT_USER
+sudo chsh -s /usr/bin/zsh $CURRENT_USER
 kill -9 -1
