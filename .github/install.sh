@@ -106,16 +106,15 @@ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > ~/fish
 fish ~/fish_install --noninteractive --yes
 rm ~/fish_install
 
+# Install zsh + OMZ
+sudo apt install -y zsh
+export ZSH="$HOME/.config/oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
+
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget bat fzf
-sudo apt install -y tmux zsh vim neovim mc
-
-# Install OMZ
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-# Install Agnoster4Avalution
-# mkdir -p "$HOME/.config/oh-my-zsh/custom/themes"
-# curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
+sudo apt install -y tmux vim neovim mc
 
 # Install Catppuccin Frappe Theme for BAT
 mkdir -p "$(batcat --config-dir)/themes"
@@ -149,6 +148,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
 
 # change shell for current user
-CURRENT_USER="$USER"
-sudo chsh -s /usr/bin/zsh $CURRENT_USER
+# CURRENT_USER="$USER"
+# sudo chsh -s /usr/bin/zsh $CURRENT_USER
 kill -9 -1
