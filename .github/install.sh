@@ -105,8 +105,6 @@ sudo apt install -y --quiet fish
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > ~/fish_install
 fish ~/fish_install --noninteractive --yes
 rm ~/fish_install
-omf install agnoster
-omf theme agnoster
 
 # Install zsh + OMZ
 sudo apt install -y zsh
