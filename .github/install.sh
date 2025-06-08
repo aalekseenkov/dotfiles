@@ -13,9 +13,9 @@ curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases
 sudo unzip ./RobotoMono.zip -d /usr/share/fonts/RobotoMono/ && rm -f ./RobotoMono.zip
 
 # install JetBrainsMono Nerd Font
-# sudo mkdir -p /usr/share/fonts/JetBrainsMono
-# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'JetBrainsMono.zip' | cut -d '"' -f 4)
-# sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./JetBrainsMono.zip
+sudo mkdir -p /usr/share/fonts/JetBrainsMono
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'JetBrainsMono.zip' | cut -d '"' -f 4)
+sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./JetBrainsMono.zip
 
 # set the correct name for the default profile into Linux Mint Gnome Terminal
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
@@ -31,7 +31,7 @@ wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/aval
 # wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-midnight-orchid.sh
 # wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-mono.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-nostalgia.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green-4-blue-tinge.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green-4-blue-tinge.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green.sh
 # wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-purple-rain.sh
 # wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-twilight-lavender.sh
@@ -39,9 +39,6 @@ wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/aval
 # wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-flower.sh
 # wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-indigo.sh
 # wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-purple.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/paper.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/tempus-day.sh
-wget https://github.com/Gogh-Co/Gogh/raw/master/installs/tempus-past.sh
 
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
@@ -56,7 +53,7 @@ bash ~/avalution-antique-green.sh
 # bash ~/avalution-midnight-orchid.sh
 # bash ~/avalution-mono.sh
 bash ~/avalution-nostalgia.sh
-# bash ~/avalution-pine-green-4-blue-tinge.sh
+bash ~/avalution-pine-green-4-blue-tinge.sh
 bash ~/avalution-pine-green.sh
 # bash ~/avalution-purple-rain.sh
 # bash ~/avalution-twilight-lavender.sh
@@ -65,9 +62,6 @@ bash ~/avalution-pine-green.sh
 # bash ~/avalution-violet-indigo.sh
 # bash ~/avalution-violet-purple.sh
 # bash ~/avalution-violet-purple.sh
-bash ~/paper.sh
-bash ~/tempus-day.sh
-bash ~/tempus-past.sh
 
 rm apply-colors.sh
 rm ~/avalution.sh
@@ -78,7 +72,7 @@ rm ~/avalution-antique-green.sh
 # rm ~/avalution-midnight-orchid.sh
 # rm ~/avalution-mono.sh
 rm ~/avalution-nostalgia.sh
-# rm ~/avalution-pine-green-4-blue-tinge.sh
+rm ~/avalution-pine-green-4-blue-tinge.sh
 rm ~/avalution-pine-green.sh
 # rm ~/avalution-purple-rain.sh
 # rm ~/avalution-twilight-lavender.sh
@@ -86,9 +80,6 @@ rm ~/avalution-pine-green.sh
 # rm ~/avalution-violet-flower.sh
 # rm ~/avalution-violet-indigo.sh
 # rm ~/avalution-violet-purple.sh
-rm ~/paper.sh
-rm ~/tempus-day.sh
-rm ~/tempus-past.sh
 
 # set the font and its size into all the profiles
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
