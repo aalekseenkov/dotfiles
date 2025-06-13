@@ -1,13 +1,13 @@
-set editing-mode vi
-set show-mode-in-prompt on
+# set editing-mode vi
+# set show-mode-in-prompt on
 
 # by default
 # set vi-ins-mode-string (ins)
 # set vi-cmd-mode-string (cmd)
 
 # set 0 (super-mini)
-set vi-ins-mode-string "+"
-set vi-cmd-mode-string ":"
+# set vi-ins-mode-string "+"
+# set vi-cmd-mode-string ":"
 
 # set 1 (mini)
 # set vi-ins-mode-string "\1\e[1;31m\2+\1\e[0m\2"
