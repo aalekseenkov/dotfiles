@@ -107,9 +107,12 @@ export ZSH="$HOME/.config/oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
 
+# install cross-shell prompt
+curl -sS https://starship.rs/install.sh | sh -s -y
+
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget
-sudo apt install -y tmux vim neovim mc starship  bat fzf
+sudo apt install -y tmux vim neovim mc bat fzf
 
 # Install Catppuccin Frappe Theme for BAT
 # mkdir -p "$(batcat --config-dir)/themes"
