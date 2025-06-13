@@ -91,7 +91,7 @@ done
 
 # Install oh-my-bash
 export OSH="$HOME/.config/oh-my-bash"
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" --unattended
 
 # Install fish + oh-my-fish
 sudo add-apt-repository --yes ppa:fish-shell/release-4
