@@ -89,9 +89,6 @@ for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ cell-height-scale 1.1
 done
 
-# Install cross-shell promt
-curl -sS https://starship.rs/install.sh | sh
-
 # Install oh-my-bash
 export OSH="$HOME/.config/oh-my-bash"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
@@ -111,8 +108,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
 
 # install CLI tools
-sudo apt install -y dconf-cli uuid-runtime xclip wget bat fzf
-sudo apt install -y tmux vim neovim mc
+sudo apt install -y dconf-cli uuid-runtime xclip wget
+sudo apt install -y tmux vim neovim mc starship  bat fzf
 
 # Install Catppuccin Frappe Theme for BAT
 # mkdir -p "$(batcat --config-dir)/themes"
