@@ -108,7 +108,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
 
 # install cross-shell prompt
-curl -sS https://starship.rs/install.sh -y | sh
+curl -fsSL https://starship.rs/install.sh -o $HOME/starship_install.sh
+chmod u+x $HOME/starship_install.sh
+sh $HOME/starship_install.sh -y
+rm $HOME/starship_install.sh
 
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget
