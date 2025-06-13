@@ -89,7 +89,14 @@ for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ cell-height-scale 1.1
 done
 
-# Install fish + omf
+# Install cross-shell promt
+curl -sS https://starship.rs/install.sh | sh
+
+# Install oh-my-bash
+export OSH="$HOME/.config/oh-my-bash"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
+# Install fish + oh-my-fish
 sudo add-apt-repository --yes ppa:fish-shell/release-4
 sudo apt update
 sudo apt install -y --quiet fish
@@ -97,7 +104,7 @@ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > ~/fish
 fish ~/fish_install --noninteractive --yes
 rm ~/fish_install
 
-# Install zsh + OMZ
+# Install zsh + oh-my-zsh
 sudo apt install -y zsh
 export ZSH="$HOME/.config/oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
