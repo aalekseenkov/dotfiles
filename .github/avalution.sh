@@ -2,7 +2,7 @@
 
 export PROFILE_NAME="Avalution"
 
-export COLOR_01="#2B4156"           # Black (Host)
+export COLOR_01="#2E465D"           # Black (Host)
 export COLOR_02="#F17C78"           # Red (Syntax string)
 export COLOR_03="#68D0AB"           # Green (Command)
 export COLOR_04="#F1D078"           # Yellow (Command second)
@@ -20,7 +20,7 @@ export COLOR_14="#D6C7DD"           # Bright Magenta
 export COLOR_15="#6ABED4"           # Bright Cyan
 export COLOR_16="#B8BFC7"           # Bright White
 
-export BACKGROUND_COLOR="#2B4156"   # Background
+export BACKGROUND_COLOR="#2E465D"   # Background
 export FOREGROUND_COLOR="#E0EBF6"   # Foreground (Text)
 
 export CURSOR_COLOR="#E0EBF6" # Cursor
