@@ -21,24 +21,14 @@ sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./Jet
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$id/ visible-name 'Default'
 
-# install Gogh's colorschemes Nord and Avalution
+# install Gogh's colorschemes Selenized and Avalution
 wget https://github.com/Gogh-Co/Gogh/raw/master/apply-colors.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-antique-green.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-blueberry-violet.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-deep-violet.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-hibiscus-purple.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-midnight-orchid.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-mono.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-nostalgia.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green-4-blue-tinge.sh
-wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pine-green.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-purple-rain.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-twilight-lavender.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-dusk.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-flower.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-indigo.sh
-# wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-violet-purple.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-campfire.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pinewood.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-dark.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-light.sh
 
 export TERMINAL="gnome-terminal"
 export GOGH_NONINTERACTIVE=
@@ -47,39 +37,18 @@ export GOGH_USE_NEW_THEME=
 chmod u+x ~/apply-colors.sh
 bash ~/avalution.sh
 bash ~/avalution-antique-green.sh
-# bash ~/avalution-blueberry-violet.sh
-# bash ~/avalution-deep-violet.sh
-# bash ~/avalution-hibiscus-purple.sh
-# bash ~/avalution-midnight-orchid.sh
-# bash ~/avalution-mono.sh
-bash ~/avalution-nostalgia.sh
-bash ~/avalution-pine-green-4-blue-tinge.sh
-bash ~/avalution-pine-green.sh
-# bash ~/avalution-purple-rain.sh
-# bash ~/avalution-twilight-lavender.sh
-# bash ~/avalution-violet-dusk.sh
-# bash ~/avalution-violet-flower.sh
-# bash ~/avalution-violet-indigo.sh
-# bash ~/avalution-violet-purple.sh
-# bash ~/avalution-violet-purple.sh
+bash ~/avalution-campfire.sh
+bash ~/avalution-pinewood.sh
+bash ~/selenized-dark.sh
+bash ~/selenized-light.sh
 
 rm apply-colors.sh
 rm ~/avalution.sh
 rm ~/avalution-antique-green.sh
-# rm ~/avalution-blueberry-violet.sh
-# rm ~/avalution-deep-violet.sh
-# rm ~/avalution-hibiscus-purple.sh
-# rm ~/avalution-midnight-orchid.sh
-# rm ~/avalution-mono.sh
-rm ~/avalution-nostalgia.sh
-rm ~/avalution-pine-green-4-blue-tinge.sh
-rm ~/avalution-pine-green.sh
-# rm ~/avalution-purple-rain.sh
-# rm ~/avalution-twilight-lavender.sh
-# rm ~/avalution-violet-dusk.sh
-# rm ~/avalution-violet-flower.sh
-# rm ~/avalution-violet-indigo.sh
-# rm ~/avalution-violet-purple.sh
+rm ~/avalution-campfire.sh
+rm ~/avalution-pinewood.sh
+rm ~/selenized-dark.sh
+rm ~/selenized-light.sh
 
 # set the font and its size into all the profiles
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
