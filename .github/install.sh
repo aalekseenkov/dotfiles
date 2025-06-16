@@ -70,7 +70,11 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo groupadd -f docker
+if [ $(getent group docker) ]; then
+  echo "Group Docker exists"
+else
+  sudo groupadd docker
+fi
 sudo usermod -aG docker $USER
 newgrp docker
 
