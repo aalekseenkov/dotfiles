@@ -76,7 +76,6 @@ else
   sudo groupadd docker
 fi
 sudo usermod -aG docker $USER
-newgrp docker
 
 # Install oh-my-bash
 export OSH="$HOME/.config/oh-my-bash"
