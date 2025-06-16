@@ -118,6 +118,8 @@ else
   sudo groupadd docker
 fi
 sudo usermod -aG docker "$USER"
+sudo wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/bash/docker -O /etc/bash_completion.d/docker
+wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/fish/docker.fish -O ~/.config/fish/completions/docker.fish
 
 # install dotfiles
 echo ".dotfiles" >> .gitignore
