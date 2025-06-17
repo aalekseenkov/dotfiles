@@ -159,12 +159,18 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-# ava
-# set -o vi
+######
+# AVA
+######
+set -o vi
 set +H
 export EDITOR=vi
 
+# dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# bash line editor
+source ~/.local/share/blesh/ble.sh
 
 #cross-shell prompt initialization
 eval "$(starship init bash)"
