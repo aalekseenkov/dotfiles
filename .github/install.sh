@@ -62,6 +62,11 @@ done
 export OSH="$HOME/.config/oh-my-bash"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" --unattended
 
+# Install BLE (Bash Line Editor)
+wget -O - https://github.com/akinomyoga/ble.sh/releases/download/nightly/ble-nightly.tar.xz | tar xJf -
+bash ble-nightly/ble.sh --install ~/.local/share
+rm -rf ble-nightly
+
 # Install fish + oh-my-fish
 sudo add-apt-repository --yes ppa:fish-shell/release-4
 sudo apt update
