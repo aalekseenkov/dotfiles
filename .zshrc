@@ -164,47 +164,6 @@ fi
 #         --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 # fi
 
-# Defining a variable with the name of the utility: bat or batcat
-if [[ -e $(which batcat) ]]; then
-    export bat="batcat"
-    alias bat="batcat"
-elif [[ -e $(which bat) ]]; then
-    export bat="bat"
-fi
-
-# Usage bat instead of cat, less, man, --help, tail -f
-if [[ -n $bat ]]; then
-    export COLORTERM="truecolor"
-    export BAT_THEME="Nord"
-#   export BAT_THEME="Catppuccin Frappe"
-    export MANPAGER="sh -c 'col -bx | $bat --language=man --style=plain'"  # Command to view man pages
-    export MANROFFOPT="-c"  # Disabling line wrapping in man
-    alias cat="$bat --style=plain --paging=never"
-    alias less="$bat --paging=always"
-    if [[ $SHELL == *zsh ]]; then # global alias "--help" if zsh
-        alias -g -- --help='--help 2>&1 | $bat --language=help --style=plain'
-    fi
-    help() { "$@" --help 2>&1 | $bat --language=help --style=plain; }
-    tailf() { tail -f "$@" | $bat --paging=never --language=log; }
-    batdiff() { git diff --name-only --relative --diff-filter=d | xargs $bat --diff; }
-fi
-
-# Usage eza instead of ls
-if [[ -x $(which eza) ]]; then
-    if [[ -n "$DISPLAY" || $(tty) == /dev/pts* ]]; then # display icons if pseudo terminal
-        alias ls="eza --group --header --icons"
-    else
-        alias ls="eza --group --header"
-    fi
-    alias ll="ls --long"
-    alias l="ls --long --all"
-    alias lm="ls --long --all --sort=modified"
-    alias lmm="ls -lbHigUmuSa --sort=modified --time-style=long-iso"
-    alias lt="ls --tree"
-    alias lr="ls --recurse"
-    alias lg="ls --long --git --sort=modified"
-fi
-
 # APT
 if [[ -x $(which apt) ]]; then
     alias AU="sudo apt update"
