@@ -27,6 +27,7 @@ wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/aval
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-antique-green.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-campfire.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pinewood.sh
+wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-dark.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-light.sh
 
@@ -39,6 +40,7 @@ bash ~/avalution.sh
 bash ~/avalution-antique-green.sh
 bash ~/avalution-campfire.sh
 bash ~/avalution-pinewood.sh
+bash ~/nord.sh
 bash ~/selenized-dark.sh
 bash ~/selenized-light.sh
 
@@ -47,6 +49,7 @@ rm ~/avalution.sh
 rm ~/avalution-antique-green.sh
 rm ~/avalution-campfire.sh
 rm ~/avalution-pinewood.sh
+rm ~/nord.sh
 rm ~/selenized-dark.sh
 rm ~/selenized-light.sh
 
@@ -91,10 +94,9 @@ rm $HOME/starship_install.sh
 sudo apt install -y dconf-cli uuid-runtime xclip wget
 sudo apt install -y tmux vim neovim mc bat fzf
 
-# Install Catppuccin Frappe Theme for BAT
-# mkdir -p "$(batcat --config-dir)/themes"
-# wget -P "$(batcat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
-# batcat cache --build
+# Setting up a bat -> batcat symlink
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
 # Install the latest verion of EZA
 sudo apt install -y gpg
