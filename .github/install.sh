@@ -27,6 +27,7 @@ wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/aval
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-antique-green.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-campfire.sh
 wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-pinewood.sh
+wget https://github.com/aalekseenkov/dotfiles/raw/refs/heads/master/.github/avalution-rosary.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/nord.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-dark.sh
 wget https://github.com/Gogh-Co/Gogh/raw/master/installs/selenized-light.sh
@@ -40,6 +41,7 @@ bash ~/avalution.sh
 bash ~/avalution-antique-green.sh
 bash ~/avalution-campfire.sh
 bash ~/avalution-pinewood.sh
+bash ~/avalution-rosary.sh
 bash ~/nord.sh
 bash ~/selenized-dark.sh
 bash ~/selenized-light.sh
@@ -49,6 +51,7 @@ rm ~/avalution.sh
 rm ~/avalution-antique-green.sh
 rm ~/avalution-campfire.sh
 rm ~/avalution-pinewood.sh
+rm ~/avalution-rosary.sh
 rm ~/nord.sh
 rm ~/selenized-dark.sh
 rm ~/selenized-light.sh
