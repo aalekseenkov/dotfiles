@@ -12,13 +12,14 @@ config.initial_rows = 28
 
 -- Changing the font size and color scheme.
 
+config.font = wezterm.font 'FiraCode Nerd Font Mono'
 -- config.font = wezterm.font 'RobotoMono Nerd Font Mono'
 -- config.font = wezterm.font 'MonaspiceNE Nerd Font Mono'
 -- config.font = wezterm.font 'MonaspiceAR Nerd Font Mono'
 -- config.font = wezterm.font 'MonaspiceXE Nerd Font Mono'
 -- config.font = wezterm.font 'MonaspiceRN Nerd Font Mono'
 -- config.font = wezterm.font 'MonaspiceKR Nerd Font Mono'
-config.font = wezterm.font 'AdwaitaMono Nerd Font Mono'
+-- config.font = wezterm.font 'AdwaitaMono Nerd Font Mono'
 
 config.font_size = 15
 config.line_height = 1.1
