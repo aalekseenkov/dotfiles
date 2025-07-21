@@ -17,6 +17,16 @@ sudo mkdir -p /usr/share/fonts/JetBrainsMono
 curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'JetBrainsMono.zip' | cut -d '"' -f 4)
 sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./JetBrainsMono.zip
 
+# install AdwaitaMono Nerd Font
+# sudo mkdir -p /usr/share/fonts/AdwaitaMono
+# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'AdwaitaMono.zip' | cut -d '"' -f 4)
+# sudo unzip ./AdwaitaMono.zip -d /usr/share/fonts/AdwaitaMono/ && rm -f ./AdwaitaMono.zip
+
+# install Monaspace Nerd Font
+# sudo mkdir -p /usr/share/fonts/Monaspace
+# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Monaspace.zip' | cut -d '"' -f 4)
+# sudo unzip ./Monaspace.zip -d /usr/share/fonts/Monaspace/ && rm -f ./Monaspace.zip
+
 # set the correct name for the default profile into Linux Mint Gnome Terminal
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$id/ visible-name 'Default'
