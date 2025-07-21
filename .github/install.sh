@@ -10,6 +10,11 @@ sudo apt install -y git unzip curl ca-certificates
 #############
 ### FONTS ###
 #############
+# install FiraCode Nerd Font
+sudo mkdir -p /usr/share/fonts/FiraCode
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'FiraCode.zip' | cut -d '"' -f 4)
+sudo unzip ./FiraCode.zip -d /usr/share/fonts/FiraCode/ && rm -f ./FiraCode.zip
+
 # install RobotoMono Nerd Font
 sudo mkdir -p /usr/share/fonts/RobotoMono
 curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'RobotoMono.zip' | cut -d '"' -f 4)
@@ -21,14 +26,14 @@ curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases
 sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./JetBrainsMono.zip
 
 # install AdwaitaMono Nerd Font
-# sudo mkdir -p /usr/share/fonts/AdwaitaMono
-# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'AdwaitaMono.zip' | cut -d '"' -f 4)
-# sudo unzip ./AdwaitaMono.zip -d /usr/share/fonts/AdwaitaMono/ && rm -f ./AdwaitaMono.zip
+sudo mkdir -p /usr/share/fonts/AdwaitaMono
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'AdwaitaMono.zip' | cut -d '"' -f 4)
+sudo unzip ./AdwaitaMono.zip -d /usr/share/fonts/AdwaitaMono/ && rm -f ./AdwaitaMono.zip
 
 # install Monaspace Nerd Font
-# sudo mkdir -p /usr/share/fonts/Monaspace
-# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Monaspace.zip' | cut -d '"' -f 4)
-# sudo unzip ./Monaspace.zip -d /usr/share/fonts/Monaspace/ && rm -f ./Monaspace.zip
+sudo mkdir -p /usr/share/fonts/Monaspace
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Monaspace.zip' | cut -d '"' -f 4)
+sudo unzip ./Monaspace.zip -d /usr/share/fonts/Monaspace/ && rm -f ./Monaspace.zip
 
 #############
 ### GNOME ###
@@ -148,11 +153,11 @@ sudo apt install -y eza
 ### WEZTERM ###
 ###############
 # Install Wezterm
-# sudo curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
-# echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
-# sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
-# sudo apt update
-# sudo apt install -y wezterm
+sudo curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
+sudo apt update
+sudo apt install -y wezterm
 
 ##############
 ### DOCKER ###
