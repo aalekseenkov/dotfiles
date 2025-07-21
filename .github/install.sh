@@ -7,6 +7,9 @@ shopt -s expand_aliases
 sudo apt update
 sudo apt install -y git unzip curl ca-certificates
 
+#############
+### FONTS ###
+#############
 # install RobotoMono Nerd Font
 sudo mkdir -p /usr/share/fonts/RobotoMono
 curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'RobotoMono.zip' | cut -d '"' -f 4)
@@ -27,6 +30,9 @@ sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./Jet
 # curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Monaspace.zip' | cut -d '"' -f 4)
 # sudo unzip ./Monaspace.zip -d /usr/share/fonts/Monaspace/ && rm -f ./Monaspace.zip
 
+#############
+### GNOME ###
+#############
 # set the correct name for the default profile into Linux Mint Gnome Terminal
 id=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$id/ visible-name 'Default'
@@ -74,6 +80,9 @@ for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ cell-height-scale 1.1
 done
 
+############
+### BASH ###
+############
 # Install oh-my-bash
 export OSH="$HOME/.config/oh-my-bash"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" --unattended
@@ -83,6 +92,9 @@ wget -O - https://github.com/akinomyoga/ble.sh/releases/download/nightly/ble-nig
 bash ble-nightly/ble.sh --install ~/.local/share
 rm -rf ble-nightly
 
+############
+### FISH ###
+############
 # Install fish + oh-my-fish
 sudo add-apt-repository --yes ppa:fish-shell/release-4
 sudo apt update
@@ -91,18 +103,27 @@ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > ~/fish
 fish ~/fish_install --noninteractive --yes
 rm ~/fish_install
 
+###########
+### ZSH ###
+###########
 # Install zsh + oh-my-zsh
 sudo apt install -y zsh
 export ZSH="$HOME/.config/oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 curl -fsSL https://raw.githubusercontent.com/aalekseenkov/dotfiles/refs/heads/master/.github/agnoster4avalution.zsh-theme -o $HOME/.config/oh-my-zsh/custom/themes/agnoster4avalution.zsh-theme
 
+##########################
+### CROSS-SHELL PROMPT ###
+##########################
 # install cross-shell prompt
 curl -fsSL https://starship.rs/install.sh -o $HOME/starship_install.sh
 chmod u+x $HOME/starship_install.sh
 sh $HOME/starship_install.sh -y
 rm $HOME/starship_install.sh
 
+#############
+### TOOLS ###
+#############
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget
 sudo apt install -y tmux vim neovim mc bat fzf vifm
@@ -111,6 +132,9 @@ sudo apt install -y tmux vim neovim mc bat fzf vifm
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
 
+###########
+### EZA ###
+###########
 # Install the latest verion of EZA
 sudo apt install -y gpg
 sudo mkdir -p /etc/apt/keyrings
@@ -120,6 +144,9 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 
+###############
+### WEZTERM ###
+###############
 # Install Wezterm
 # sudo curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
 # echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
@@ -127,6 +154,9 @@ sudo apt install -y eza
 # sudo apt update
 # sudo apt install -y wezterm
 
+##############
+### DOCKER ###
+##############
 # Install Docker
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl
@@ -151,6 +181,9 @@ sudo wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib
 mkdir -p ~/.config/fish/completions
 wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/fish/docker.fish -O ~/.config/fish/completions/docker.fish
 
+################
+### DOTFILES ###
+################
 # install dotfiles
 echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles
@@ -161,13 +194,22 @@ test -e ~/.zshrc && mv ~/{.zshrc,.zshrc.save}
 dotfiles checkout
 source ~/.bashrc
 
+###########
+### VIM ###
+###########
 # install vim plugins
 vim +PlugInstall +qall
 
+############
+### TMUX ###
+############
 # install tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
 
+#############
+### SHELL ###
+#############
 # change shell for current user
 # CURRENT_USER="$USER"
 # sudo chsh -s /usr/bin/zsh $CURRENT_USER
