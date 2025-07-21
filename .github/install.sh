@@ -105,7 +105,7 @@ rm $HOME/starship_install.sh
 
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget
-sudo apt install -y tmux vim neovim mc bat fzf
+sudo apt install -y tmux vim neovim mc bat fzf vifm
 
 # Setting up a bat -> batcat symlink
 mkdir -p ~/.local/bin
@@ -119,6 +119,13 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo apt update
 sudo apt install -y eza
+
+# Install Wezterm
+# sudo curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+# echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+# sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
+# sudo apt update
+# sudo apt install -y wezterm
 
 # Install Docker
 sudo apt-get update
