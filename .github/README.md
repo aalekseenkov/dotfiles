@@ -13,6 +13,16 @@ Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.gith
 
 ![Dotfiles](./dotfiles.png)
 
+## Installed Tools
+- [wezterm](https://wezterm.org/) - a powerful cross-platform terminal emulator and multiplexer
+- [omb](https://ohmybash.nntoan.com/), [ble](https://github.com/akinomyoga/ble.sh) - a framework for bash configuration and a command line editor
+- [fish](https://fishshell.com/) + [omf](https://github.com/oh-my-fish/oh-my-fish), [zsh](https://www.zsh.org/) + [omz](https://ohmyz.sh/) - some other shells and their configuration's frameworks
+- [starship](https://starship.rs/) - a cross-shell prompt
+- [vifm](https://vifm.info/) - a file manager with curses interface
+- [neovim](https://neovim.io/) - a hyperextensible Vim-based text editor
+
+*The list is updated as it develops.*
+
 ## Manual Installation
 
 ### GNOME Terminal
