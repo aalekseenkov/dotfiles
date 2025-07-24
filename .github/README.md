@@ -37,9 +37,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 ```
 3. Input the numbers of the themes: Selenized Dark, Selenized Light (`280 281`)
 
-#### Nerd Fonts
-
-##### Hack Nerd Font
+#### Hack Nerd Font
 
 1. ```sudo apt update && sudo apt-get install -y unzip curl```
 2. ```sudo mkdir -p /usr/share/fonts/Hack```
@@ -51,13 +49,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 
 [All Nerd Fonts Downloads](https://www.nerdfonts.com/font-downloads)
 
-### DevOps and Sysadmin's Tools
-
-1. ```sudo apt update```
-2. ```sudo apt install -y git xclip tmux zsh bat eza fzf vim neovim```
-3. ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended```
-
-### Dotfiles Installing
+## Dotfiles Installing
 
 1. ```echo ".dotfiles" >> .gitignore```
 2. ```git clone --bare https://github.com/aalekseenkov/dotfiles $HOME/.dotfiles```
@@ -71,7 +63,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 10. ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
 11. ```~/.tmux/plugins/tpm/bin/install_plugins```
 
-**You can change a shell for the current user to zsh:**
+**To change a shell for the current user to zsh or fish:**
 
 12. chsh -s /usr/bin/zsh
 13. kill -9 -1
