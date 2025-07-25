@@ -1,0 +1,58 @@
+#!/usr/bin/bash
+# запуск на выполнение в bash
+# source tfkeys or . tfkeys
+# запуск на выполнение в fish
+# exec bash -c "source tfkeys; exec fish"
+
+set -e
+
+################
+### ВАЖНО!!! ###
+################
+# Имя сервисного аккаунта (замените на ваше)
+SERVICE_ACCOUNT_NAME="ava-sa"
+
+# Убедитесь, что утилита `yc` установлена и настроена
+if ! command -v yc &>/dev/null; then
+  echo "Ошибка: утилита 'yc' не установлена. Установите Yandex Cloud CLI."
+  exit 1
+fi
+
+# Убедитесь, что утилита `yc` установлена и настроена
+if ! command -v jq &>/dev/null; then
+  echo "Ошибка: утилита 'jq' не установлена. Установите jq."
+  exit 1
+fi
+
+# Установите переменные для доступа к облаку
+export YC_TOKEN=$(yc iam create-token)
+export YC_CLOUD_ID=$(yc config get cloud-id)
+export YC_FOLDER_ID=$(yc config get folder-id)
+
+# Создаем ACCESS_KEY и SECRET_KEY
+echo "Создание ключей доступа для сервисного аккаунта '$SERVICE_ACCOUNT_NAME'..."
+KEYS=$(yc iam access-key create --service-account-name $SERVICE_ACCOUNT_NAME --format json)
+
+# Извлекаем ACCESS_KEY и SECRET_KEY из JSON
+ACCESS_KEY=$(echo $KEYS | jq -r '.access_key.key_id')
+SECRET_KEY=$(echo $KEYS | jq -r '.secret')
+
+# Проверяем, что ключи успешно созданы
+if [ -z "$ACCESS_KEY" ] || [ -z "$SECRET_KEY" ]; then
+  echo "Ошибка: не удалось создать ключи доступа."
+  exit 1
+fi
+
+# Экспортируем ключи в переменные окружения
+export AWS_ACCESS_KEY_ID=$ACCESS_KEY
+export AWS_SECRET_ACCESS_KEY=$SECRET_KEY
+
+# Выводим ключи (опционально)
+echo "YC_TOKEN: $YC_TOKEN"
+echo "YC_CLOUD_ID: $YC_CLOUD_ID"
+echo "YC_FOLDER_ID: $YC_FOLDER_ID"
+echo "ACCESS_KEY: $ACCESS_KEY"
+echo "SECRET_KEY: $SECRET_KEY"
+
+# Сообщение об успешном завершении
+echo "Ключи доступа успешно созданы и экспортированы в переменные окружения."
