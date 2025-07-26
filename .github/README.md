@@ -13,7 +13,7 @@ Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.gith
 
 ![Dotfiles](./dotfiles.png)
 
-## Installed Tools
+### Installed Tools
 - [wezterm](https://wezterm.org/) - a powerful cross-platform terminal emulator and multiplexer
 - [fish](https://fishshell.com/) - a smart and user-friendly command line shell
 - [zsh](https://www.zsh.org/) -  a shell designed for interactive use
