@@ -15,11 +15,15 @@ Download [install.sh](https://github.com/aalekseenkov/dotfiles/blob/master/.gith
 
 ## Installed Tools
 - [wezterm](https://wezterm.org/) - a powerful cross-platform terminal emulator and multiplexer
-- [omb](https://ohmybash.nntoan.com/), [ble](https://github.com/akinomyoga/ble.sh) - a framework for bash configuration and a command line editor
-- [fish](https://fishshell.com/) + [omf](https://github.com/oh-my-fish/oh-my-fish), [zsh](https://www.zsh.org/) + [omz](https://ohmyz.sh/) - some other shells and their configuration's frameworks
+- [fish](https://fishshell.com/) - a smart and user-friendly command line shell
+- [zsh](https://www.zsh.org/) -  a shell designed for interactive use
 - [starship](https://starship.rs/) - a cross-shell prompt
-- [vifm](https://vifm.info/) - a file manager with curses interface
+- [omb](https://ohmybash.nntoan.com/) - a framework for bash configuration
+- [ble](https://github.com/akinomyoga/ble.sh) - a bash command line editor
+- [omf](https://github.com/oh-my-fish/oh-my-fish) - a framework for fish configuration
+- [omz](https://ohmyz.sh/) - a framework for zsh configuration
 - [neovim](https://neovim.io/) - a hyperextensible Vim-based text editor
+- [vifm](https://vifm.info/) - a file manager with curses interface
 
 *The list is updated as it develops.*
 
