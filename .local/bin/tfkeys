@@ -4,6 +4,11 @@
 # запуск на выполнение в fish
 # exec bash -c "source tfkeys; exec fish"
 
+# предварительное создание сервисного аккаунта
+# yc iam service-account create --name <backend-s3>
+# yc resource-manager folder add-access-binding --id $YC_FOLDER_ID --service-account-name <backend-s3> --role storage.admin
+# yc iam access-key create --service-account-name <backend-s3>
+
 set -e
 
 ################
