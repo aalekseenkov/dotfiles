@@ -9,23 +9,25 @@ local config = wezterm.config_builder()
 -- Changing the initial geometry for new windows:
 config.initial_cols = 120
 config.initial_rows = 28
+config.window_padding = {
+  left = 5,
+  right = 5,
+  top = 4,
+  bottom = 0
+}
 
 -- Changing the font size and color scheme.
 
 config.font = wezterm.font 'FiraCode Nerd Font Mono'
--- config.font = wezterm.font 'RobotoMono Nerd Font Mono'
--- config.font = wezterm.font 'MonaspiceNE Nerd Font Mono'
--- config.font = wezterm.font 'MonaspiceAR Nerd Font Mono'
--- config.font = wezterm.font 'MonaspiceXE Nerd Font Mono'
--- config.font = wezterm.font 'MonaspiceRN Nerd Font Mono'
--- config.font = wezterm.font 'MonaspiceKR Nerd Font Mono'
--- config.font = wezterm.font 'AdwaitaMono Nerd Font Mono'
 
 config.font_size = 15
 config.line_height = 1.1
 
 -- Default Color Scheme
-config.color_scheme = 'Zenbones_light'
+config.color_scheme = 'Avalution'
+-- config.color_scheme = 'Neobones_light'
+-- config.color_scheme = 'Nova (base16)'
+-- config.color_scheme = 'Nord (base16)'
 
 -- Avalution's Color Schemes
 -- config.color_scheme = 'Avalution'
@@ -33,7 +35,7 @@ config.color_scheme = 'Zenbones_light'
 -- config.color_scheme = 'Avalution_Flow'
 
 -- favourite light background schemes
--- config.color_scheme = 'Neobones_light'
+-- config.color_scheme = 'Zenbones_light'
 -- config.color_scheme = 'Mexico Light (base16)'
 -- config.color_scheme = 'Harmonic16 Light (base16)'
 -- config.color_scheme = 'Atelier Savanna Light (base16)'
@@ -72,8 +74,6 @@ config.color_scheme = 'Zenbones_light'
 -- config.color_scheme = 'Violet Light'
 -- config.color_scheme = 'Sakura (base16)'
 -- config.color_scheme = 'Selenized Dark (Gogh)'
--- config.color_scheme = 'seoulbones_dark'
--- config.color_scheme = 'seoulbones_light'
 -- config.color_scheme = 'Shades of Purple (base16)'
 -- config.color_scheme = 'Silk Light (base16)'
 -- config.color_scheme = 'Railscasts (light) (terminal.sexy)'
@@ -95,7 +95,6 @@ config.color_scheme = 'Zenbones_light'
 -- config.color_scheme = 'iceberg-light'
 -- config.color_scheme = 'iTerm2 Tango Light'
 -- config.color_scheme = 'iTerm2 Tango Dark'
--- config.color_scheme = 'Ivory Light (terminal.sexy)'
 -- config.color_scheme = 'Horizon Bright (Gogh)'
 -- config.color_scheme = 'Humanoid light (base16)'
 -- config.color_scheme = 'Gogh (Gogh)'
@@ -122,7 +121,6 @@ config.color_scheme = 'Zenbones_light'
 -- config.color_scheme = 'dayfox'
 -- config.color_scheme = 'DjangoSmooth'
 -- config.color_scheme = 'Catppuccin Latte'
--- config.color_scheme = 'Colorcli (Gogh)'
 -- config.color_scheme = 'Bamboo Light'
 -- config.color_scheme = 'Bim (Gogh)'
 -- config.color_scheme = 'Breadog (Gogh)'
