@@ -131,7 +131,7 @@ rm $HOME/starship_install.sh
 #############
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget
-sudo apt install -y tmux vim neovim mc bat fzf vifm
+sudo apt install -y tmux vim neovim mc bat fzf vifm htop tree
 
 # Setting up a bat -> batcat symlink
 mkdir -p ~/.local/bin
