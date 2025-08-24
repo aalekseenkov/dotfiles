@@ -18,7 +18,7 @@ config.window_padding = {
 
 -- Changing the font size and color scheme.
 
-config.font = wezterm.font 'FiraCode Nerd Font Mono'
+config.font = wezterm.font 'FiraCode Nerd Font'
 
 config.font_size = 15
 config.line_height = 1.1
