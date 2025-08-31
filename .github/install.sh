@@ -199,6 +199,12 @@ sudo apt install -y make gcc ripgrep unzip git xclip neovim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
+###########
+### NPM ###
+###########
+sudo apt install -y npm
+sudo npm install --global prettier
+
 ################
 ### DOTFILES ###
 ################
