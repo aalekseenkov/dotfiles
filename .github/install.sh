@@ -131,17 +131,11 @@ rm $HOME/starship_install.sh
 #############
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget
-sudo apt install -y tmux vim neovim mc bat fzf vifm htop tree
+sudo apt install -y tmux vim mc bat fzf vifm htop tree
 
 # Setting up a bat -> batcat symlink
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
-
-###############
-### LAZYVIM ###
-###############
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
 
 ###########
 ### EZA ###
@@ -191,6 +185,19 @@ sudo usermod -aG docker "$USER"
 sudo wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/bash/docker -O /etc/bash_completion.d/docker
 mkdir -p ~/.config/fish/completions
 wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/fish/docker.fish -O ~/.config/fish/completions/docker.fish
+
+##############
+### NEOVIM ###
+##############
+sudo add-apt-repository --yes ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt install -y make gcc ripgrep unzip git xclip neovim
+
+###############
+### LAZYVIM ###
+###############
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 
 ################
 ### DOTFILES ###
