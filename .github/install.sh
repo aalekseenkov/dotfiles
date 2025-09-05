@@ -205,6 +205,16 @@ rm -rf ~/.config/nvim/.git
 sudo apt install -y npm
 sudo npm install --global prettier
 
+# BEGIN - TO CHECK AFTER LINUX_FACTORY SEASON 1
+###############
+### Ansible ###
+###############
+sudo apt install -y software-properties-common
+sudo add-apt-repository --yes ppa:ansible/ansible
+sudo apt update
+sudo apt install -y ansible
+# END - TO CHECK AFTER LINUX_FACTORY SEASON 1
+
 ################
 ### DOTFILES ###
 ################
