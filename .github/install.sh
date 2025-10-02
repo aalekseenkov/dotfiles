@@ -213,6 +213,10 @@ sudo apt install -y software-properties-common
 sudo add-apt-repository --yes ppa:ansible/ansible
 sudo apt update
 sudo apt install -y ansible
+###################################
+### YAMLFIX IN NEOVIM VIA MASON ###
+###################################
+sudo apt install -y python3.12-venv
 # END - TO CHECK AFTER LINUX_FACTORY SEASON 1
 
 ################
