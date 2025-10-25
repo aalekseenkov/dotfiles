@@ -10,8 +10,8 @@ local config = wezterm.config_builder()
 config.initial_cols = 120
 config.initial_rows = 28
 config.window_padding = {
-	left = "3cell",
-	right = "3cell",
+	left = "2cell",
+	right = "2cell",
 	top = "1cell",
 	bottom = "1cell",
 }
