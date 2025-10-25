@@ -10,30 +10,16 @@ sudo apt install -y git unzip curl ca-certificates
 #############
 ### FONTS ###
 #############
+
+# install AtkynsonMono Nerd Font
+sudo mkdir -p /usr/share/fonts/AtkinsonHyperlegibleMono
+curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'AtkinsonHyperlegibleMono.zip' | cut -d '"' -f 4)
+sudo unzip ./AtkinsonHyperlegibleMono.zip -d /usr/share/fonts/AtkinsonHyperlegibleMono/ && rm -f ./AtkinsonHyperlegibleMono.zip
+
 # install FiraCode Nerd Font
-sudo mkdir -p /usr/share/fonts/FiraCode
-curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'FiraCode.zip' | cut -d '"' -f 4)
-sudo unzip ./FiraCode.zip -d /usr/share/fonts/FiraCode/ && rm -f ./FiraCode.zip
-
-# install RobotoMono Nerd Font
-# sudo mkdir -p /usr/share/fonts/RobotoMono
-# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'RobotoMono.zip' | cut -d '"' -f 4)
-# sudo unzip ./RobotoMono.zip -d /usr/share/fonts/RobotoMono/ && rm -f ./RobotoMono.zip
-
-# install JetBrainsMono Nerd Font
-# sudo mkdir -p /usr/share/fonts/JetBrainsMono
-# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'JetBrainsMono.zip' | cut -d '"' -f 4)
-# sudo unzip ./JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/ && rm -f ./JetBrainsMono.zip
-
-# install AdwaitaMono Nerd Font
-# sudo mkdir -p /usr/share/fonts/AdwaitaMono
-# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'AdwaitaMono.zip' | cut -d '"' -f 4)
-# sudo unzip ./AdwaitaMono.zip -d /usr/share/fonts/AdwaitaMono/ && rm -f ./AdwaitaMono.zip
-
-# install Monaspace Nerd Font
-# sudo mkdir -p /usr/share/fonts/Monaspace
-# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'Monaspace.zip' | cut -d '"' -f 4)
-# sudo unzip ./Monaspace.zip -d /usr/share/fonts/Monaspace/ && rm -f ./Monaspace.zip
+# sudo mkdir -p /usr/share/fonts/FiraCode
+# curl -fsSLO $(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep browser_download_url | grep 'FiraCode.zip' | cut -d '"' -f 4)
+# sudo unzip ./FiraCode.zip -d /usr/share/fonts/FiraCode/ && rm -f ./FiraCode.zip
 
 #############
 ### GNOME ###
@@ -81,8 +67,8 @@ rm ~/selenized-light.sh
 profiles=($(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "[]\',"))
 for i in ${!profiles[*]}; do
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ use-system-font false
-  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'FiraCode Nerd Font Mono 15'
-  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ cell-height-scale 1.1
+  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ font 'AtkynsonMono Nerd Font 16'
+  gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"${profiles[i]}"/ cell-height-scale 1.4
 done
 
 ############
