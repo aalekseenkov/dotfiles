@@ -10,10 +10,10 @@ local config = wezterm.config_builder()
 config.initial_cols = 120
 config.initial_rows = 28
 config.window_padding = {
-	left = "2cell",
-	right = "2cell",
-	top = "1cell",
-	bottom = "1cell",
+	left = "3cell",
+	right = "3cell",
+	top = "0.5cell",
+	bottom = 0,
 }
 
 -- configures whether the window has a title bar and/or resizable border
@@ -26,7 +26,7 @@ config.tab_bar_at_bottom = true
 
 config.font = wezterm.font("AtkynsonMono Nerd Font")
 config.font_size = 16
-config.line_height = 1.4
+config.line_height = 1.5
 
 -- Changing the font size and color scheme.
 
