@@ -191,7 +191,6 @@ rm -rf ~/.config/nvim/.git
 sudo apt install -y npm
 sudo npm install --global prettier
 
-# BEGIN - TO CHECK AFTER LINUX_FACTORY SEASON 1
 ###############
 ### Ansible ###
 ###############
@@ -199,6 +198,7 @@ sudo apt install -y software-properties-common
 sudo add-apt-repository --yes ppa:ansible/ansible
 sudo apt update
 sudo apt install -y ansible
+
 ###################################
 ### YAMLFIX IN NEOVIM VIA MASON ###
 ###################################
@@ -215,14 +215,10 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 dotfiles config --local status.showUntrackedFiles no
 test -e ~/.bashrc && mv ~/{.bashrc,.bashrc.save}
 test -e ~/.zshrc && mv ~/{.zshrc,.zshrc.save}
+test -e ~/.zshrc && mv ~/{.zshrc,.zshrc.save}
+test -e ~/.config/nvim/lua/config/lazy.lua && mv ~/.config/nvim/lua/config/{lazy.lua,lazy.lua.save}
 dotfiles checkout
 source ~/.bashrc
-
-###########
-### VIM ###
-###########
-# install vim plugins
-vim +PlugInstall +qall
 
 ############
 ### TMUX ###
@@ -230,6 +226,12 @@ vim +PlugInstall +qall
 # install tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 bash ~/.tmux/plugins/tpm/bin/install_plugins
+
+###########
+### VIM ###
+###########
+# install vim plugins
+vim +PlugInstall +qall
 
 #############
 ### SHELL ###
