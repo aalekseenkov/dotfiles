@@ -117,7 +117,7 @@ rm $HOME/starship_install.sh
 #############
 # install CLI tools
 sudo apt install -y dconf-cli uuid-runtime xclip wget
-sudo apt install -y tmux vim mc bat fzf vifm htop tree
+sudo apt install -y tmux vim mc bat fzf vifm htop tree flameshot
 
 # Setting up a bat -> batcat symlink
 mkdir -p ~/.local/bin
