@@ -49,11 +49,27 @@ config.enable_tab_bar = false
 config.font = wezterm.font("AtkynsonMono Nerd Font")
 config.font_size = 16
 config.line_height = 1.25
-
+config.font_rules = {
+  {
+    intensity = 'Bold',
+    font = wezterm.font('AtkynsonMono Nerd Font', { weight = 'Regular' }),
+  },
+}
 -- Changing the font size and color scheme.
 
 -- Default Color Scheme
 config.color_scheme = "Quotidian"
+-- config.color_scheme = 'nordfox'
+-- config.color_scheme = "Nova (base16)"
+-- config.color_scheme = "Breath Light (Gogh)"
+-- config.color_scheme = 'Novel'
+-- config.color_scheme = 'Atelier Forest Light (base16)'
+-- config.color_scheme = 'Everforest Dark Hard (Gogh)'
+-- config.color_scheme = 'Everforest Dark Medium (Gogh)'
+-- config.color_scheme = 'Everforest Dark Soft (Gogh)'
+-- config.color_scheme = 'Everforest Light (Gogh)'
+-- config.color_scheme = 'Everforest Dark (Gogh)'
+-- config.color_scheme = 'Alabaster'
 -- config.color_scheme = "Silk Dark (base16)"
 -- config.color_scheme = "Avalution"
 -- config.color_scheme = "Ryuuko"
