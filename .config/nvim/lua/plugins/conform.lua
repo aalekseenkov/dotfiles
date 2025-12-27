@@ -11,6 +11,7 @@ return {
           env = {
             YAMLFIX_WHITELINES = "1",
             YAMLFIX_SECTION_WHITELINES = "1",
+            YAMLFIX_LINE_LENGTH = "9999",
           },
         },
       },
