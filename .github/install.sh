@@ -170,7 +170,8 @@ sudo usermod -aG docker "$USER"
 # Docker completions for bash and fish
 sudo wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/bash/docker -O /etc/bash_completion.d/docker
 mkdir -p ~/.config/fish/completions
-wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/fish/docker.fish -O ~/.config/fish/completions/docker.fish
+# wget https://raw.githubusercontent.com/docker/cli/refs/heads/master/contrib/completion/fish/docker.fish -O ~/.config/fish/completions/docker.fish
+sudo docker completion fish > ~/.config/fish/completions/docker.fish
 
 ##############
 ### NEOVIM ###
