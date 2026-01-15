@@ -12,6 +12,7 @@ return {
             YAMLFIX_WHITELINES = "1",
             YAMLFIX_SECTION_WHITELINES = "1",
             YAMLFIX_LINE_LENGTH = "9999",
+            YAMLFIX_SEQUENCE_STYLE = "block_style",
           },
         },
       },
