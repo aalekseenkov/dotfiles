@@ -16,8 +16,8 @@ export TERM="xterm-256color"               # Set terminal type for better color 
 # Oh-my-zsh theme selection
 # Find more themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 if [[ -n "$DISPLAY" || $(tty) == /dev/pts* ]]; then
-    ZSH_THEME="robbyrussell"               # Use this theme in GUI mode
-#   ZSH_THEME="agnoster4avalution"         # Use this theme in GUI mode
+#   ZSH_THEME="robbyrussell"               # Use this theme in GUI mode
+    ZSH_THEME="agnoster4avalution"         # Use this theme in GUI mode
 #   ZSH_THEME="jonathan"                   # Use this theme in GUI mode
 #   ZSH_THEME="gnzh"                       # Use this theme in GUI mode
     export VIRTUAL_ENV_DISABLE_PROMPT=1    # Disable default virtualenv prompt
@@ -42,7 +42,9 @@ setopt share_history                        # Share history between sessions
 setopt histignorespace                      # Ignore commands starting with a space
 
 # Enable vi-mode for the command line (default is emacs mode)
-# set -o vi
+set -o vi
+bindkey -M viins '^F' autosuggest-accept
+bindkey -M viins '^E' end-of-line
 
 ###############
 ### PLUGINS ###
@@ -266,3 +268,5 @@ compdef _cmd_completion cmd
 if [[ -n "$DISPLAY" ]]; then
     prompt_context() { }                    # Empty function to disable context
 fi
+
+eval "$(starship init zsh)"

@@ -11,12 +11,12 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- Defining the default padding
-local default_padding = {
-	left = 152,
-	right = 152,
-	top = 0,
-	bottom = 10,
-}
+-- local default_padding = {
+-- 	left = 152,
+-- 	right = 152,
+-- 	top = 0,
+-- 	bottom = 10,
+-- }
 
 -- Applying the default padding
 config.window_padding = default_padding
@@ -50,26 +50,29 @@ config.font = wezterm.font("AtkynsonMono Nerd Font")
 config.font_size = 16
 config.line_height = 1.25
 config.font_rules = {
-  {
-    intensity = 'Bold',
-    font = wezterm.font('AtkynsonMono Nerd Font', { weight = 'Regular' }),
-  },
+	{
+		intensity = "Bold",
+		font = wezterm.font("AtkynsonMono Nerd Font", { weight = "Regular" }),
+	},
 }
 -- Changing the font size and color scheme.
 
 -- Default Color Scheme
 config.color_scheme = "Quotidian"
--- config.color_scheme = 'nordfox'
+-- config.color_scheme = "Zenbones_light"
+-- config.color_scheme = "dayfox"
+-- config.color_scheme = "dawnfox"
+-- config.color_scheme = "nordfox"
 -- config.color_scheme = "Nova (base16)"
 -- config.color_scheme = "Breath Light (Gogh)"
--- config.color_scheme = 'Novel'
--- config.color_scheme = 'Atelier Forest Light (base16)'
+-- config.color_scheme = "Novel"
+-- config.color_scheme = "Atelier Forest Light (base16)"
 -- config.color_scheme = 'Everforest Dark Hard (Gogh)'
 -- config.color_scheme = 'Everforest Dark Medium (Gogh)'
 -- config.color_scheme = 'Everforest Dark Soft (Gogh)'
--- config.color_scheme = 'Everforest Light (Gogh)'
+-- config.color_scheme = "Everforest Light (Gogh)"
 -- config.color_scheme = 'Everforest Dark (Gogh)'
--- config.color_scheme = 'Alabaster'
+-- config.color_scheme = "Alabaster"
 -- config.color_scheme = "Silk Dark (base16)"
 -- config.color_scheme = "Avalution"
 -- config.color_scheme = "Ryuuko"
@@ -107,7 +110,9 @@ config.color_scheme = "Quotidian"
 -- config.color_scheme = "Navy and Ivory (terminal.sexy)"
 
 -- Spawn a fish shell in login mode
-config.default_prog = { "/usr/bin/fish", "-l" }
+-- config.default_prog = { "/usr/bin/fish", "-l" }
+-- Spawn a zsh shell in login mode
+config.default_prog = { '/bin/zsh', '-l' }
 
 -- Finally, return the configuration to wezterm:
 return config

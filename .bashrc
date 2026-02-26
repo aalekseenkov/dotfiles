@@ -170,7 +170,7 @@ export EDITOR=vi
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # bash line editor
-source ~/.local/share/blesh/ble.sh
+# source ~/.local/share/blesh/ble.sh
 
 #cross-shell prompt initialization
 eval "$(starship init bash)"
